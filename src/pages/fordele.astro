@@ -1,15 +1,20 @@
 ---
 import FordeleTekst from "../components/FordeleTekst.astro";
 import PointSaldo from "../components/PointSaldo.astro";
+import AppPromo from "../components/AppPromo.astro";
 import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout>
   <main>
+
     <section class="fordele-top">
       <FordeleTekst />
       <PointSaldo point={0} />
     </section>
+
+    <AppPromo />
+
   </main>
 </Layout>
 
