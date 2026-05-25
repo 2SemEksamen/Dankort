@@ -3,10 +3,15 @@ import FordeleTekst from "../components/FordeleTekst.astro";
 import PointSaldo from "../components/PointSaldo.astro";
 import AppPromo from "../components/AppPromo.astro";
 import Layout from "../layouts/Layout.astro";
+import Navbar from "../components/Navbar.astro";
+import Footer from "../components/Footer.astro";
+import MiniNavbar from "../components/MiniNavbar.astro";
 ---
 
 <Layout>
   <main>
+    <Navbar />
+  <MiniNavbar active="fordele" />
 
     <section class="fordele-top">
       <FordeleTekst />
@@ -16,6 +21,7 @@ import Layout from "../layouts/Layout.astro";
     <AppPromo />
 
   </main>
+  <Footer />
 </Layout>
 
 <style is:global>
