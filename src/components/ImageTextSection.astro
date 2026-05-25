@@ -1,25 +1,12 @@
 ---
-// ImageTextSection.astro - selvstændig komponent
-export interface Props {
-  eyebrow?: string;
-  title?: string;
-  titleHighlight?: string;
-  description?: string;
-  linkText?: string;
-  linkHref?: string;
-  imageSrc?: string;
-  imageAlt?: string;
-  reverse?: boolean;
-}
- 
 const {
-  eyebrow = "OM DANKORT ØREMÆRKET",
+  category = "OM DANKORT ØREMÆRKET",
   title = "Én lille handling.",
   titleHighlight = "For en grønnere fremtid.",
   description = "Dankort (og bankerne) donerer automatisk 1 øre til Den Danske Naturfond, hver gang du betaler med dit Dankort eller Visa/Dankort i Danmark.",
   linkText = "Læs mere om hvordan det virker",
   linkHref = "#",
-  imageSrc = "/images/nature.jpg",
+  imageSrc = "/images/enlillehandling.webp",
   imageAlt = "Dansk natur",
   reverse = false
 } = Astro.props;
@@ -32,7 +19,7 @@ const {
         <img src={imageSrc} alt={imageAlt} />
       </div>
       <div class="img-text__content">
-        {eyebrow && <span class="img-text__eyebrow">{eyebrow}</span>}
+        {category && <span class="img-text__category">{category}</span>}
         <h2 class="img-text__title">
           {title}<br />
           {titleHighlight && <span class="img-text__highlight">{titleHighlight}</span>}
@@ -45,10 +32,9 @@ const {
 </section>
  
 <style>
-  /* Mobile-first */
   .img-text {
     padding: 1.25rem 0 2rem;
-    font-family: 'Raleway', -apple-system, sans-serif;
+    font-family: 'Raleway', sans-serif;
     color: #1A1A1A;
   }
  
@@ -66,17 +52,16 @@ const {
  
   .img-text__image img {
     width: 100%;
-    height: auto;
-    border-radius: 12px;
+    height: 361px;
+    border-radius: 55px;
     object-fit: cover;
-    aspect-ratio: 16 / 9;
     display: block;
   }
  
-  .img-text__eyebrow {
+  .img-text__category {
     display: block;
     font-size: 0.7rem;
-    font-weight: 700;
+    font-weight: bolder;
     letter-spacing: 0.08em;
     text-transform: uppercase;
     color: #E21E26;
@@ -86,7 +71,7 @@ const {
   .img-text__title {
     font-size: 1.35rem;
     line-height: 1.2;
-    font-weight: 800;
+    font-weight: bolder;
     letter-spacing: -0.01em;
     margin-bottom: 0.875rem;
   }
@@ -101,21 +86,20 @@ const {
     margin-bottom: 0.875rem;
     max-width: 42ch;
     line-height: 1.5;
+    font-weight: lighter;
+    font-family: 'Raleway', sans-serif;
   }
  
   .img-text__link {
     color: #E21E26;
-    font-weight: 700;
+    font-weight: bolder;
     font-size: 0.875rem;
-    text-decoration: underline;
-    text-underline-offset: 3px;
   }
  
   .img-text__link:hover {
     color: #E21E26;
   }
  
-  /* Tablet og opefter: 2 kolonner */
   @media (min-width: 768px) {
     .img-text {
       padding: 2.5rem 0;

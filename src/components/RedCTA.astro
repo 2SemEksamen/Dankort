@@ -1,23 +1,12 @@
 ---
-// RedCTA.astro - selvstændig komponent
-export interface Props {
-  title?: string;
-  titleHighlight?: string;
-  description?: string;
-  buttonText?: string;
-  buttonHref?: string;
-  sideText?: string;
-  phoneImage?: string;
-}
- 
 const {
   title = "Bliv en del af noget større med Dankort Ung",
   titleHighlight = "og begynd at optjen point.",
   description = "Opret en konto gratis og se, hvordan dine betalinger gør en forskel for naturen. Optjen point, og brug dem på fede præmier og konkurrencer.",
   buttonText = "Læs mere",
-  buttonHref = "#",
+  buttonHref = "/pages/login.astro",
   sideText = "Følg din udvikling og se din personlige impact over tid.",
-  phoneImage = "/images/phone-mockup.png"
+  phoneImage = "/images/app.webp"
 } = Astro.props;
 ---
  
@@ -41,125 +30,130 @@ const {
   </div>
 </section>
  
+
 <style>
-  /* Mobile-first: tekst venstre, telefon højre */
   .red-cta {
     background: #E21E26;
     color: #FFFFFF;
     padding: 1.25rem 0;
-    font-family: 'Raleway', -apple-system, sans-serif;
-    overflow: hidden;
+    font-family: 'Raleway', sans-serif;
   }
- 
+
   .red-cta__container {
     max-width: 1100px;
     margin: 0 auto;
     padding: 0 1.25rem;
   }
- 
+
   .red-cta__inner {
     display: grid;
     grid-template-columns: 1fr 0.7fr;
     gap: 1.25rem;
     align-items: center;
   }
- 
+
   .red-cta__title {
     font-size: 0.95rem;
     font-weight: 800;
     line-height: 1.25;
     letter-spacing: -0.01em;
   }
- 
+
   .red-cta__description {
     margin: 0.875rem 0;
     font-size: 0.7rem;
+    font-weight: 400;
     line-height: 1.4;
     opacity: 0.95;
   }
- 
+
   .red-cta__button {
     display: inline-block;
     background: #FFFFFF;
-    color: #1A1A1A;
+    color: #E21E26;
     font-weight: 700;
     padding: 0.5rem 1rem;
     border-radius: 6px;
     border: none;
     cursor: pointer;
     font-size: 0.75rem;
-    font-family: 'Raleway', -apple-system, sans-serif;
+    font-family: 'Raleway', sans-serif;
     text-decoration: none;
     transition: background 0.2s ease;
   }
- 
+
   .red-cta__button:hover {
     background: #EEEEEE;
   }
- 
+
   .red-cta__phone {
     display: flex;
     justify-content: center;
+    align-items: center;
   }
- 
+
   .red-cta__phone img {
-    max-height: 200px;
+    max-height: 280px;
     width: auto;
     object-fit: contain;
     display: block;
+    margin: -3rem 0;  
   }
- 
+
   .red-cta__side {
-    display: none;
+    
     font-size: 0.85rem;
+    font-weight: 700;
     line-height: 1.5;
     opacity: 0.95;
   }
- 
-  /* Desktop: 3-kolonners layout */
-  @media (min-width: 900px) {
+
+  @media (min-width: 768px) {
     .red-cta {
       padding: 4rem 0;
     }
- 
+
     .red-cta__container {
       padding: 0 1.5rem;
     }
- 
+
     .red-cta__inner {
       grid-template-columns: 1.3fr 0.9fr 1fr;
       gap: 2.5rem;
+      
     }
- 
+
     .red-cta__title {
       font-size: 1.7rem;
     }
- 
+
     .red-cta__description {
       margin: 1.5rem 0;
       font-size: 0.95rem;
       max-width: 42ch;
     }
- 
+
     .red-cta__button {
       font-size: 0.95rem;
       padding: 0.85rem 1.75rem;
     }
- 
+
     .red-cta__phone img {
-      max-height: 380px;
+      max-height: 500px;
+      margin: -7rem 0;  
+      margin-left: 80%;
     }
- 
+
     .red-cta__side {
       display: block;
       max-width: 22ch;
+        margin-left: 50%;
     }
   }
- 
+
   @media (min-width: 1200px) {
     .red-cta__title {
       font-size: 1.9rem;
     }
   }
 </style>
- 
