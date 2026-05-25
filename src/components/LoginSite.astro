@@ -1,0 +1,278 @@
+---
+---
+
+<section class="login-screen">
+  <div class="logo-wrapper">
+    <img src="/images/DankortLogo.png" alt="Dankort logo" class="logo" />
+  </div>
+
+  <div class="welcome">
+    <p>Velkommen til</p>
+    <h1>Dankort Øremærket</h1>
+  </div>
+
+  <div class="tabs">
+    <button class="tab active">Log ind</button>
+    <button class="tab">Opret konto</button>
+  </div>
+
+  <form class="login-form">
+    <div class="input-group">
+      <input type="text" placeholder="E-mail eller brugernavn" />
+    </div>
+
+    <div class="input-group password-group">
+      <input type="password" placeholder="Adgangskode" />
+
+    </div>
+
+    <a href="#" class="forgot-password">Glemt adgangskode?</a>
+
+
+  </form>
+<a href="/velkommen" class="login-btn">
+  Log ind
+</a>
+  <div class="privacy">
+   
+
+    <p>
+      Vi passer godt på dine data. Læs mere i vores
+      <span>privathedspolitik</span>
+    </p>
+  </div>
+</section>
+
+<style>
+  .login-screen {
+    min-height: 100vh;
+    width: 100%;
+    background: #f3f3f3;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 48px 24px 32px;
+    font-family: "Raleway", sans-serif;
+  }
+
+  .logo-wrapper {
+    margin-top: 10px;
+  }
+
+  .logo {
+    width: 150px;
+    object-fit: contain;
+  }
+
+  .welcome {
+    text-align: center;
+    margin-top: 70px;
+  }
+
+  .welcome p {
+    font-size: 2.5rem;
+    font-weight: 300;
+    color: #111;
+    margin-bottom: 28px;
+  }
+
+  .welcome h1 {
+    font-size: 3rem;
+    font-weight: 800;
+    color: #000;
+  }
+
+  .tabs {
+    width: 100%;
+    max-width: 620px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-top: 90px;
+    border-bottom: 2px solid #d8d8d8;
+  }
+
+  .tab {
+    background: none;
+    border: none;
+    padding: 0 0 20px;
+    font-size: 2rem;
+    font-weight: 700;
+    cursor: pointer;
+    position: relative;
+  }
+
+  .tab.active::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    width: 100%;
+    height: 4px;
+    background: #ef1722;
+  }
+
+  .login-form {
+    width: 100%;
+    max-width: 620px;
+    margin-top: 55px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .input-group {
+
+    background: transparent;
+    border: 2px solid #d3d3d3;
+    border-radius: 22px;
+    height: 86px;
+    display: flex;
+    align-items: center;
+    padding: 0 32px;
+    margin-bottom: 28px;
+  }
+
+  .input-group input {
+    width: 100%;
+    border: none;
+    outline: none;
+    background: transparent;
+    font-size: 1.7rem;
+    font-family: inherit;
+    color: #111;
+  }
+
+  .input-group input::placeholder {
+    color: #9c9c9c;
+    font-weight: 400;
+  }
+
+  .password-group {
+    justify-content: space-between;
+  }
+
+  .eye-btn {
+    background: none;
+    border: none;
+    color: #5f5f5f;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .forgot-password {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: #000;
+    text-decoration: none;
+    margin-left: 12px;
+  }
+
+.login-btn {
+  margin: 110px auto 0;
+  width: 76%;
+  height: 88px;
+  border-radius: 20px;
+  border: 3px solid #111;
+  background: #ef1722;
+  color: white;
+
+  font-size: 2rem;
+  font-weight: 800;
+  font-family: inherit;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  text-decoration: none;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+  .login-btn:hover {
+    transform: translateY(-2px);
+  }
+
+  .privacy {
+    margin-top: auto;
+    padding-top: 80px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: #8b8b8b;
+    font-size: 1rem;
+    text-align: center;
+  }
+
+  .privacy span {
+    color: #111;
+    font-weight: 700;
+  }
+
+  @media (max-width: 768px) {
+    .login-screen {
+      padding: 40px 20px 24px;
+    }
+
+    .logo {
+      width: 110px;
+    }
+
+    .welcome {
+      margin-top: 55px;
+    }
+
+    .welcome p {
+      font-size: 1.9rem;
+      margin-bottom: 20px;
+    }
+
+    .welcome h1 {
+      font-size: 2.5rem;
+    }
+
+    .tabs {
+      margin-top: 70px;
+    }
+
+    .tab {
+      font-size: 1.5rem;
+      padding-bottom: 16px;
+    }
+
+    .login-form {
+      margin-top: 40px;
+    }
+
+    .input-group {
+      height: 72px;
+      border-radius: 18px;
+      padding: 0 24px;
+      margin-bottom: 20px;
+    }
+
+    .input-group input {
+      font-size: 1.2rem;
+    }
+
+    .forgot-password {
+      font-size: 1.1rem;
+    }
+
+    .login-btn {
+      margin-top: 80px;
+      width: 85%;
+      height: 72px;
+      font-size: 1.6rem;
+      border-radius: 16px;
+    }
+
+    .privacy {
+      padding-top: 60px;
+      font-size: 0.85rem;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+  }
+</style>
