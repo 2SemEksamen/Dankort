@@ -1,21 +1,11 @@
-astro---
-export interface Props {
-  eyebrow?: string;
-  title?: string;
-  description?: string;
-  linkText?: string;
-  linkHref?: string;
-  imageSrc?: string;
-  imageAlt?: string;
-}
-
+---
 const {
-  eyebrow = "OM DANSKE BUTIKKER",
+  category = "OM DANSKE BUTIKKER",
   title = "Du støtter lokale butikker og lader pengene blive i Danmark",
   description = "Når du betaler med dit Dankort, undgår butikkerne dyre kortgebyrer — penge der i stedet kan bruges på at skabe værdi lokalt. Du er med til at styrke danske butikker og lokalsamfund, og sørger for at gebyret bliver i Danmark og skaber værdi, hvor du bor.",
   linkText = "Læs mere om hvordan det virker",
   linkHref = "#",
-  imageSrc = "/images/friends.jpg",
+  imageSrc = "/images/gladevennersammen.webp",
   imageAlt = "Glade venner sammen"
 } = Astro.props;
 ---
@@ -23,7 +13,7 @@ const {
 <section class="local-support">
   <div class="local-support__container">
     <div class="local-support__text">
-      <span class="local-support__eyebrow">{eyebrow}</span>
+      <span class="local-support__category">{category}</span>
       <h2 class="local-support__title">{title}</h2>
       <p class="local-support__description">{description}</p>
       <a href={linkHref} class="local-support__link">{linkText}</a>
@@ -37,7 +27,7 @@ const {
 <style>
   .local-support {
     padding: 2rem 0;
-    font-family: 'Raleway', -apple-system, sans-serif;
+    font-family: 'Raleway', sans-serif;
     color: #1A1A1A;
   }
 
@@ -50,10 +40,10 @@ const {
     gap: 1.25rem;
   }
 
-  .local-support__eyebrow {
+  .local-support__category {
     display: block;
     font-size: 0.7rem;
-    font-weight: 700;
+    font-weight: bolder;
     letter-spacing: 0.08em;
     text-transform: uppercase;
     color: #E21E26;
@@ -62,7 +52,7 @@ const {
 
   .local-support__title {
     font-size: 1.35rem;
-    font-weight: 800;
+    font-weight: bolder;
     line-height: 1.25;
     letter-spacing: -0.01em;
     margin-bottom: 0.875rem;
@@ -73,14 +63,15 @@ const {
     font-size: 0.9rem;
     margin-bottom: 0.875rem;
     line-height: 1.6;
+    font-family: 'Raleway', sans-serif;
+    font-weight: lighter
   }
 
   .local-support__link {
     color: #E21E26;
-    font-weight: 700;
+    font-weight: bolder;
     font-size: 0.875rem;
-    text-decoration: underline;
-    text-underline-offset: 3px;
+    
   }
 
   .local-support__link:hover {
@@ -88,12 +79,11 @@ const {
   }
 
   .local-support__image img {
-    width: 100%;
-    height: auto;
-    border-radius: 12px;
+   width: 100%; 
+   max-width: 673px;
+    border-radius: 55px;
     object-fit: cover;
-    aspect-ratio: 16 / 11;
-    display: block;
+  margin: 0 auto;
   }
 
   @media (min-width: 768px) {

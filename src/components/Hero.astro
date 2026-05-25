@@ -1,22 +1,11 @@
 ---
-// Hero.astro - selvstændig, ingen global.css nødvendig
-export interface Props {
-  title?: string;
-  highlight?: string;
-  description?: string;
-  linkText?: string;
-  linkHref?: string;
-  imageSrc?: string;
-  imageAlt?: string;
-}
- 
 const {
   title = "Hver gang du betaler,",
   highlight = "gør du en forskel",
   description = "Med Dankort Øremærket støtter du naturen i Danmark — helt automatisk, hver gang du betaler med dit Dankort eller Visa/Dankort.",
   linkText = "Læs mere om Den Danske Naturfond",
-  linkHref = "#",
-  imageSrc = "/images/card-plant.png",
+  linkHref = "https://naturfonden.dk/?gad_source=1&gad_campaignid=22207585853&gbraid=0AAAAAC8Dva9a1v0yxxFjhJtSrX1SS9j5p&gclid=CjwKCAjw5s_QBhAdEiwADD_gBo_y8uLhC8JL41dDY8sfqBLep1R3-wccMpOg6tSkO9qBSgAjgeUQXhoCKGYQAvD_BwE",
+  imageSrc = "/images/dankortgren.webp",
   imageAlt = "Dankort kort med plante"
 } = Astro.props;
 ---
@@ -38,13 +27,26 @@ const {
 </section>
  
 <style>
-  @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700;800&display=swap');
- 
-  /* Mobile-first */
+
+  .hero {
+  padding: 1.25rem 0 2rem;
+  background: #FFFFFF;
+  font-family: 'Raleway', sans-serif;
+  color: #1A1A1A;
+  position: relative;  
+  z-index: 2;           
+}
+
+.hero__image {
+  margin-top: 2rem;
+  margin-bottom: -4rem;  
+  position: relative;   
+  z-index: 2;            
+}
   .hero {
     padding: 1.25rem 0 2rem;
     background: #FFFFFF;
-    font-family: 'Raleway', -apple-system, sans-serif;
+    font-family: 'Raleway', sans-serif;
     color: #1A1A1A;
   }
  
@@ -57,13 +59,15 @@ const {
   .hero__title {
     font-size: 1.5rem;
     line-height: 1.15;
-    font-weight: 800;
+    font-weight: lighter;
     letter-spacing: -0.01em;
     margin-bottom: 1.25rem;
+;
   }
  
   .hero__highlight {
     color: #E21E26;
+    font-weight: 800;
   }
  
   .hero__description {
@@ -72,19 +76,15 @@ const {
     max-width: 38ch;
     margin-bottom: 1.25rem;
     line-height: 1.5;
+    font-weight: lighter;
   }
  
   .hero__link {
     color: #E21E26;
     font-weight: 700;
     font-size: 0.875rem;
-    text-decoration: underline;
-    text-underline-offset: 3px;
   }
  
-  .hero__link:hover {
-    color: #E21E26;
-  }
  
   .hero__image {
     margin-top: 2rem;
@@ -94,12 +94,10 @@ const {
     width: 100%;
     height: auto;
     object-fit: contain;
-    max-width: 280px;
     margin: 0 auto;
     display: block;
   }
  
-  /* Tablet og opefter */
   @media (min-width: 768px) {
     .hero {
       padding: 4rem 0 2.5rem;
@@ -126,12 +124,12 @@ const {
     .hero__link {
       grid-column: 1;
     }
- 
-    .hero__image {
-      grid-column: 2;
-      grid-row: 1 / span 3;
-      margin-top: 0;
-    }
+ .hero__image {
+  grid-column: 2;
+  grid-row: 1 / span 3;
+  margin-top: 0;
+  margin-bottom: -21.5rem;
+}
   }
  
   @media (min-width: 1024px) {
