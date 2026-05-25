@@ -1,0 +1,153 @@
+---
+// ImageTextSection.astro - selvstændig komponent
+export interface Props {
+  eyebrow?: string;
+  title?: string;
+  titleHighlight?: string;
+  description?: string;
+  linkText?: string;
+  linkHref?: string;
+  imageSrc?: string;
+  imageAlt?: string;
+  reverse?: boolean;
+}
+ 
+const {
+  eyebrow = "OM DANKORT ØREMÆRKET",
+  title = "Én lille handling.",
+  titleHighlight = "For en grønnere fremtid.",
+  description = "Dankort (og bankerne) donerer automatisk 1 øre til Den Danske Naturfond, hver gang du betaler med dit Dankort eller Visa/Dankort i Danmark.",
+  linkText = "Læs mere om hvordan det virker",
+  linkHref = "#",
+  imageSrc = "/images/nature.jpg",
+  imageAlt = "Dansk natur",
+  reverse = false
+} = Astro.props;
+---
+ 
+<section class="img-text">
+  <div class="img-text__container">
+    <div class={["img-text__inner", reverse ? "img-text__inner--reverse" : ""].join(' ')}>
+      <div class="img-text__image">
+        <img src={imageSrc} alt={imageAlt} />
+      </div>
+      <div class="img-text__content">
+        {eyebrow && <span class="img-text__eyebrow">{eyebrow}</span>}
+        <h2 class="img-text__title">
+          {title}<br />
+          {titleHighlight && <span class="img-text__highlight">{titleHighlight}</span>}
+        </h2>
+        <p class="img-text__description">{description}</p>
+        {linkText && <a href={linkHref} class="img-text__link">{linkText}</a>}
+      </div>
+    </div>
+  </div>
+</section>
+ 
+<style>
+  /* Mobile-first */
+  .img-text {
+    padding: 1.25rem 0 2rem;
+    font-family: 'Raleway', -apple-system, sans-serif;
+    color: #1A1A1A;
+  }
+ 
+  .img-text__container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 1.25rem;
+  }
+ 
+  .img-text__inner {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+ 
+  .img-text__image img {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+    object-fit: cover;
+    aspect-ratio: 16 / 9;
+    display: block;
+  }
+ 
+  .img-text__eyebrow {
+    display: block;
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #E21E26;
+    margin-bottom: 0.875rem;
+  }
+ 
+  .img-text__title {
+    font-size: 1.35rem;
+    line-height: 1.2;
+    font-weight: 800;
+    letter-spacing: -0.01em;
+    margin-bottom: 0.875rem;
+  }
+ 
+  .img-text__highlight {
+    color: #1A1A1A;
+  }
+ 
+  .img-text__description {
+    color: #1A1A1A;
+    font-size: 0.9rem;
+    margin-bottom: 0.875rem;
+    max-width: 42ch;
+    line-height: 1.5;
+  }
+ 
+  .img-text__link {
+    color: #E21E26;
+    font-weight: 700;
+    font-size: 0.875rem;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+  }
+ 
+  .img-text__link:hover {
+    color: #E21E26;
+  }
+ 
+  /* Tablet og opefter: 2 kolonner */
+  @media (min-width: 768px) {
+    .img-text {
+      padding: 2.5rem 0;
+    }
+ 
+    .img-text__container {
+      padding: 0 1.5rem;
+    }
+ 
+    .img-text__inner {
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem;
+      align-items: center;
+    }
+ 
+    .img-text__inner--reverse .img-text__image {
+      order: 2;
+    }
+ 
+    .img-text__image img {
+      aspect-ratio: 4 / 3;
+    }
+ 
+    .img-text__title {
+      font-size: 1.75rem;
+    }
+  }
+ 
+  @media (min-width: 1024px) {
+    .img-text__title {
+      font-size: 2rem;
+    }
+  }
+</style>
+ 
