@@ -1,87 +1,154 @@
 ---
-
 ---
-
-<section class="velkommen">
-<h1>Velkommen til <br><span>Dankort Ung</span></h1>
-<h3>Et univers der gør en forskel</h3>
-<p>Med Dankort Ung får du mere ud af dine betalinger. </p>
-<p>Hver gang du bruger dit Dankort, optjener du point, som giver adgang til eksklusive konkurrencer, fordele og oplevelser.</p>
-
-<h3>
-    Som medlem af Dankort Ung får du blandt andet adgang til:
-</h3>
+<div class="velkommen-wrapper">
+  <section class="velkommen">
+    <h1>Velkommen til <br><span>Dankort Ung</span></h1>
+    <h3><span>Et univers der gør en forskel</span></h3>
+    <p>Med Dankort Ung får du mere ud af dine betalinger.</p>
+    <p>Hver gang du bruger dit Dankort, optjener du point, som giver adgang til eksklusive konkurrencer, fordele og oplevelser.</p>
+    <h3>Som medlem af Dankort Ung får du blandt andet adgang til:</h3>
     <ul class="sommedlempunkter">
-<li> Konkurrencer om koncert og festivalbilletter</li>
-<li>Biografbilletter og oplevelser</li>
-<li> Gavekort til caféer, shopping og kultur</li>
-<li> Særlige kampagner</li>
+      <li>Konkurrencer om koncert og festivalbilletter</li>
+      <li>Biografbilletter og oplevelser</li>
+      <li>Gavekort til caféer, shopping og kultur</li>
+      <li>Særlige kampagner</li>
     </ul>
     <p>Dankort Ung er skabt for at give dig lidt ekstra i hverdagen, samtidig med at du helt automatisk donerer til den Danske Natur Fond.</p>
-</section>
-
-<section class="iphoneogapp"> 
-    <div class="iphone">
-        <img src="/images/Velkommen-iphonebilleder.png" alt="iphonebilleder">
-    </div>
     
-    <div class="app"> 
-        <img src="/images/appstoreknap.png" alt="appstore">
-        <img src="/images/googleplayapp.png" alt="googleplay"></div>
-</section>
+    <div class="app app-desktop">
+      <img src="/images/appstoreknap.webp" alt="appstore">
+      <img src="/images/googleplayapp.webp" alt="googleplay">
+    </div>
+  </section>
+
+  <section class="iphoneogapp">
+    <div class="iphone">
+      <img src="/images/Velkommen-iphonebilleder.webp" alt="iphonebilleder">
+    </div>
+    <p><span>Har du ikke et Dankort endnu? - Kontakt din bank og forhør dig.</span></p>
+    <a href="login" class="login-btn">Log ind</a>
+    
+    <div class="app app-mobil">
+      <img src="/images/appstoreknap.webp" alt="appstore">
+      <img src="/images/googleplayapp.webp" alt="googleplay">
+    </div>
+  </section>
+</div>
 
 
 <style>
-    .velkommen{
-        margin: 40px 40px;
-        font-family: "Raleway", sans-serif;
-    }
+.velkommen {
+  margin: 40px;
+}
 
-    h1{
-        font-weight: extra-bold; 
-        font-size: 25px;
-    }
-     h2 {
-      color:#E21E27;  
-      font-weight: extra-bold;
-      font-size: 10px;
-     }
-     span{
-        color: #E21E27;
-     }
-     p {
-        font-weight: regular;
-        font-size: 10px;
-     }
+.sommedlempunkter {
+  font-size: 10px;
+}
 
-     h3{
-        font-size: 10px;
-        font-weight: extra-bold;
-     }
+.iphoneogapp {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 20px;
+}
 
-     .sommedlempunkter{
-        font-size: 10px;
-     }
+.iphone img {
+  width: 80%;
+  display: block;
+  margin-left: 10%;
+}
 
-    .iphoneogapp{
-        display: grid;
-        grid-template-columns: 1fr 1fr;
+.login-btn {
+  display: block;
+  background-color: #E21E27;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  font-weight: bolder;
+  font-size: 10px;
+  padding: 8px 40px;
+  margin-top: 10px;
+  border-radius: 6px;
+  width: fit-content;
+}
 
-    }
-     
-     .iphone img{
-        margin: 0 0 0 40px;
-        width: auto;
-     }
+.app {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 8px;
+  margin: 12px 0;
+}
 
-     .app{
-        padding: 40px 0 0 10px;
-     }
-     .app img{
+.app img {
+  height: 35px;
+  width: auto;
+}
+
+/* App-logoerne er skjult på mobil */
+.app-desktop {
+  display: none;
+}
+
+/* App-logoerne er vist på mobil */
+.app-mobil {
+  display: flex;
+}
+
+@media (min-width: 768px) {
+  .velkommen {
+    margin: 0 40px 40px 100px;
+  }
+
+  .sommedlempunkter {
+    font-size: 16px;
+  }
+
+  .velkommen-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 40px;
+  }
+
+  .iphoneogapp {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 40px;
+  }
+
+  .iphone{
+    width:550px;
+  }
+
+  .iphone img {
+  width: 100%;
+  padding: 60px 0 0 0;
+  margin-left: 0;
+}
+  .login-btn {
+    font-size: 16px;
+    padding: 12px 80px;
+  }
+
+  /* App logoerne er skjult på desktop */
+  .app-mobil {
+    display: none;
+  }
+
+  /* App logoerne er vist på desktop */
+  .app-desktop {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    margin-top: 20px;
+  }
+
+  .app-desktop img {
+    height: 45px;
     width: auto;
-    padding: 5px;
-     }
-
-      
-     
+  }
+ }
 </style>
