@@ -2,46 +2,49 @@
 ---
 
 <section class="menu-wrapper">
+
   <div class="menu-card">
 
     <div class="language-box">
-    
-<img class="flag" src="/images/flag.png" alt="">
+      <img class="flag" src="/images/flag.png" alt="">
       <span>Dansk</span>
-<p class="dropdown">⌄</p>
-     
+      <p class="dropdown">⌄</p>
     </div>
 
-    <div class="menu-section">
-      <h2>Dankort</h2>
+    <div class="sections">
 
-      <a href="#">Om Dankort</a>
-      <a href="#">Presse</a>
-      <a href="#">Download logoer</a>
-    </div>
+      <div class="menu-section">
+        <h2>Dankort</h2>
 
-    <div class="menu-section">
-      <h2>Support</h2>
+        <a href="#">Om Dankort</a>
+        <a href="#">Presse</a>
+        <a href="#">Download logoer</a>
+        <a href="#">Dankort schemeregler</a>
+      </div>
 
-     
-    
-      <a href="#">Kontakt salg</a>
-      <a href="#">Kontakt kundeservice</a>
-      <a href="#">Support erhverv</a>
-      <a href="#">Support privat</a>
-    </div>
+      <div class="menu-section">
+        <h2>Support</h2>
 
-    <div class="menu-section">
-      <h2>Politikker</h2>
+        <a href="#">Kontakt salg</a>
+        <a href="#">Kontakt kundeservice</a>
+        <a href="#">Support erhverv</a>
+        <a href="#">Support privat</a>
+      </div>
 
-      <a href="#">Privatlivspolitikker</a>
-      <a href="#">Cookies</a>
-      <a href="#">AEE regulativ</a>
+      <div class="menu-section">
+        <h2>Politikker</h2>
+
+        <a href="#">Privatlivspolitikker</a>
+        <a href="#">Cookies</a>
+        <a href="#">AEE regulativ</a>
+      </div>
+
     </div>
 
   </div>
 
   <div class="campaign-card">
+
     <img src="/images/DankortLogo.png" alt="Dankort logo" />
 
     <h1>
@@ -49,156 +52,167 @@
       <br />
       sammen
     </h1>
+
   </div>
+
 </section>
 
 <style>
-  .menu-wrapper {
-    padding: 32px;
-    background: #f3f3f3;
-    min-height: 100vh;
-    font-family: "Raleway", sans-serif;
-  }
 
-  .menu-card {
-    background: #e9e9e9;
-    border-radius: 40px;
-    padding: 28px;
-    height: 670px;
-  }
 
-  .language-box {
-    width: fit-content;
-    background: white;
-    border-radius: 999px;
-    padding: 10px 18px;
-    display: flex;
-    align-items: center;
-    gap: 14px;
-    margin-bottom: 50px;
-    max-height: 40px;
-  }
+
+.menu-wrapper {
+  width: 100%;
+
+
+  padding: 24px;
+
+  background: #f3f3f3;
+
+  font-family: "Raleway", sans-serif;
+}
+
+.menu-card {
+  background: #e9e9e9;
+
+  border-radius: 40px;
+
+  padding: 32px;
+
+}
+
+.language-box {
+  width: fit-content;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+
+  background: white;
+
+  border-radius: 999px;
+  padding: 10px 18px;
+  margin-bottom: 30px;
+  max-height: 50px;
+}
+
+.flag {
+  width: 42px;
+  height: 42px;
+
+  border-radius: 50%;
+}
+
+.language-box span {
+  font-size: 15px;
+  font-weight: bolder;
+
+  color: #243040;
+}
+
 .dropdown {
-    font-size: 30px;
-    color: #333;
-    margin-top: 15px;
-  }
-  .flag {
-    width: 42px;
-    height: 42px;
-    border-radius: 50%;
-    background: #E21E28;
-    position: relative;
-    overflow: hidden;
-  }
+  font-size: 30px;
 
+  margin-top: 12px;
 
-  .language-box span {
-    font-size: 20px;
-  
-    font-weight: bolder;
-    color: #243040;
-  }
+  color: #243040;
+}
 
-  .menu-section {
-    margin-bottom: 55px;
-  }
+.sections {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
 
-  .menu-section h2 {
-    font-size: 16px;
-    font-weight: extra-bold;
-    color: #243040;
-   
-  }
+.menu-section h2 {
+  font-size: 18px;
+  font-weight: 800;
+
+  color: #243040;
+
+}
+
 .menu-section a {
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 10px;
   text-decoration: none;
   color: #333;
-  font-size: 16px;
+  font-size: 14px;
 
 }
 
 .menu-section a::before {
   content: "›";
+
   color: #E31C23;
+
   font-size: 34px;
   font-weight: bold;
+
   line-height: 1;
 }
 
+.campaign-card {
+  background: #E31C23;
 
+  border-radius: 40px;
 
-  .campaign-card {
-    margin-top: 28px;
-    background: #E21E28;
-    border-radius: 40px;
-    padding: 40px 28px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-  }
-
-  .campaign-card img {
-    width: 90px;
-    margin-bottom: 20px;
-  }
-
-  .campaign-card h1 {
-    color: white;
-    font-size: 35px;
-    line-height: 1.1;
-    font-weight: extra-bold;
-  }
-  .arrow {
-
-  font-size: 40px;
-  color: #E31C23;
-  font-weight: bold;
-
-}
-
-.arrowText {
+  padding: 40px 30px;
   display: flex;
-  align-items: center;
-  gap: 8px;
+  flex-direction: column;
+gap: 60px;
+  min-height: 200px;
+  margin-bottom: 50px;
 }
 
-@media (min-width: 1024px) {
+.campaign-card img {
+  width: 110px;
+}
+
+.campaign-card h1 {
+  color: white;
+
+  font-size: 32px;
+  line-height: 1.05;
+
+  font-weight: bolder;
+}
+
+@media (min-width: 924px) {
+
+    
   .menu-wrapper {
-    display: flex;
-    gap: 28px;
-    align-items: stretch;
+box-sizing: border-box;
+  display: grid;
+grid-template-columns: 1fr  400px;
   }
 
   .menu-card {
-    flex: 1;
-    display: flex;
-    flex-wrap: wrap;
-    align-content: flex-start;
+
+max-height: 250px;
     padding: 70px;
-    position: relative;
-  }
 
-  .language-box {
-    width: 220px;
-    margin-bottom: 80px;
-  }
-
-  .menu-section {
-    flex: 1;
-    min-width: 250px;
     margin-bottom: 0;
   }
 
+.sections {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 60px;
+}
   .campaign-card {
-    width: 420px;
-    margin-top: 0;
-    min-height: auto;
+  
+max-height: 400px;
+    padding: 60px 40px;
+  }
+
+  .campaign-card img {
+    width: 120px;
   }
 
   .campaign-card h1 {
-    font-size: 4rem;
+    font-size: 38px;
   }
 }
+
+</style>

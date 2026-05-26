@@ -1,9 +1,10 @@
 ---
 import Welcome from '../components/Welcome.astro';
 import Layout from '../layouts/Layout.astro';
-
-import ForskelInfoCard from '../components/ForskelInfoCard.astro'; 
+import Navbar from '../components/Navbar.astro';
 import LUVelkommen from '../components/LU-velkommen.astro'; 
+import Footer from '../components/Footer.astro';
+import MiniNavbar from '../components/MiniNavbar.astro';
 
 
 // Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
@@ -11,9 +12,10 @@ import LUVelkommen from '../components/LU-velkommen.astro';
 ---
 
 <Layout>
-<LUVelkommen>
-
-</LUVelkommen>
+	<Navbar/>
+	<MiniNavbar active="velkommen"/>
+	<LUVelkommen/>
+	<Footer/>
 
 
 </Layout>
