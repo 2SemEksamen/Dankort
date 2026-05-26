@@ -1,33 +1,44 @@
----
-const {
-  category = "OM DANKORT ØREMÆRKET",
-  title = "Én lille handling.",
-  titleHighlight = "For en grønnere fremtid.",
-  description = "Dankort (og bankerne) donerer automatisk 1 øre til Den Danske Naturfond, hver gang du betaler med dit Dankort eller Visa/Dankort i Danmark.",
-  linkText = "Læs mere om hvordan det virker",
-  linkHref = "#",
-  imageSrc = "/images/enlillehandling.webp",
-  imageAlt = "Dansk natur",
-  reverse = false
-} = Astro.props;
----
- 
 <section class="img-text">
   <div class="img-text__container">
-    <div class={["img-text__inner", reverse ? "img-text__inner--reverse" : ""].join(' ')}>
+
+    <div class="img-text__inner">
+
       <div class="img-text__image">
-        <img src={imageSrc} alt={imageAlt} />
+        <img
+          src="/images/enlillehandling.webp"
+          alt="Dansk natur"
+        />
       </div>
+
       <div class="img-text__content">
-        {category && <span class="img-text__category">{category}</span>}
+
+        <span class="img-text__category">
+          OM DANKORT ØREMÆRKET
+        </span>
+
         <h2 class="img-text__title">
-          {title}<br />
-          {titleHighlight && <span class="img-text__highlight">{titleHighlight}</span>}
+          Én lille handling.
+          <br />
+
+          <span class="img-text__highlight">
+            For en grønnere fremtid.
+          </span>
         </h2>
-        <p class="img-text__description">{description}</p>
-        {linkText && <a href={linkHref} class="img-text__link">{linkText}</a>}
+
+        <p class="img-text__description">
+          Dankort (og bankerne) donerer automatisk 1 øre til
+          Den Danske Naturfond, hver gang du betaler med dit
+          Dankort eller Visa/Dankort i Danmark.
+        </p>
+
+        <a href="#" class="img-text__link">
+          Læs mere om hvordan det virker
+        </a>
+
       </div>
+
     </div>
+
   </div>
 </section>
  

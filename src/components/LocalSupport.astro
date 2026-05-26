@@ -1,26 +1,37 @@
----
-const {
-  category = "OM DANSKE BUTIKKER",
-  title = "Du støtter lokale butikker og lader pengene blive i Danmark",
-  description = "Når du betaler med dit Dankort, undgår butikkerne dyre kortgebyrer — penge der i stedet kan bruges på at skabe værdi lokalt. Du er med til at styrke danske butikker og lokalsamfund, og sørger for at gebyret bliver i Danmark og skaber værdi, hvor du bor.",
-  linkText = "Læs mere om hvordan det virker",
-  linkHref = "#",
-  imageSrc = "/images/gladevennersammen.webp",
-  imageAlt = "Glade venner sammen"
-} = Astro.props;
----
-
 <section class="local-support">
   <div class="local-support__container">
+
     <div class="local-support__text">
-      <span class="local-support__category">{category}</span>
-      <h2 class="local-support__title">{title}</h2>
-      <p class="local-support__description">{description}</p>
-      <a href={linkHref} class="local-support__link">{linkText}</a>
+
+      <span class="local-support__category">
+        OM DANSKE BUTIKKER
+      </span>
+
+      <h2 class="local-support__title">
+        Du støtter lokale butikker og lader pengene blive i Danmark
+      </h2>
+
+      <p class="local-support__description">
+        Når du betaler med dit Dankort, undgår butikkerne dyre kortgebyrer
+        — penge der i stedet kan bruges på at skabe værdi lokalt.
+        Du er med til at styrke danske butikker og lokalsamfund,
+        og sørger for at gebyret bliver i Danmark og skaber værdi,
+        hvor du bor.
+      </p>
+
+      <a href="#" class="local-support__link">
+        Læs mere om hvordan det virker
+      </a>
+
     </div>
+
     <div class="local-support__image">
-      <img src={imageSrc} alt={imageAlt} />
+      <img
+        src="/images/gladevennersammen.webp"
+        alt="Glade venner sammen"
+      />
     </div>
+
   </div>
 </section>
 
