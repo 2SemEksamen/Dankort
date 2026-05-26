@@ -1,3 +1,9 @@
+---
+import Navbar from '../components/Navbar.astro';
+
+import Footer from '../components/Footer.astro';
+
+---
 <!doctype html>
 <html lang="en">
 	<head>
@@ -9,7 +15,12 @@
 		<title>Astro Basics</title>
 	</head>
 	<body>
+		<Navbar />
+	
 		<slot />
+
+		<Footer />
+
 	</body>
 </html>
 
@@ -27,5 +38,32 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: 'Raleway', sans-serif;
 }
+
+ h1{
+        font-weight: extra-bold; 
+        font-size: 25px;
+    }
+h2 {
+      color:#E21E27;  
+      font-weight: extra-bold;
+      font-size: 12px;
+     }
+    span{
+        color: #E21E27;
+     }
+     p {
+        font-weight: regular;
+        font-size: 10px;
+     }
+	   a {
+        font-weight: bolder;
+        font-size: 10px;
+     }
+
+     h3{
+        font-size: 12px;
+        font-weight: extra-bold;
+     }
 </style>
