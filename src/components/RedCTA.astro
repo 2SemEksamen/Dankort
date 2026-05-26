@@ -1,31 +1,39 @@
 ---
-const {
-  title = "Bliv en del af noget større med Dankort Ung",
-  titleHighlight = "og begynd at optjen point.",
-  description = "Opret en konto gratis og se, hvordan dine betalinger gør en forskel for naturen. Optjen point, og brug dem på fede præmier og konkurrencer.",
-  buttonText = "Læs mere",
-  buttonHref = "/pages/login.astro",
-  sideText = "Følg din udvikling og se din personlige impact over tid.",
-  phoneImage = "/images/app.webp"
-} = Astro.props;
+
 ---
  
 <section class="red-cta">
   <div class="red-cta__container">
     <div class="red-cta__inner">
+
       <div class="red-cta__content">
-        <h2 class="red-cta__title">{title} {titleHighlight}</h2>
-        <p class="red-cta__description">{description}</p>
-        <a href={buttonHref} class="red-cta__button">{buttonText}</a>
+
+        <h2 class="red-cta__title">
+          Bliv en del af noget større med Dankort Ung
+          og begynd at optjen point.
+        </h2>
+
+        <p class="red-cta__description">
+          Opret en konto gratis og se, hvordan dine betalinger gør en forskel for naturen.
+          Optjen point, og brug dem på fede præmier og konkurrencer.
+        </p>
+
+        <a href="/pages/login.astro" class="red-cta__button">
+          Læs mere
+        </a>
+
       </div>
- 
+
       <div class="red-cta__phone">
-        <img src={phoneImage} alt="Dankort Ung app" />
+        <img src="/images/app.webp" alt="Dankort Ung app" />
       </div>
- 
+
       <div class="red-cta__side">
-        <p>{sideText}</p>
+        <p>
+          Følg din udvikling og se din personlige impact over tid.
+        </p>
       </div>
+
     </div>
   </div>
 </section>
