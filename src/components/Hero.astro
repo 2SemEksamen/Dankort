@@ -1,28 +1,35 @@
----
-const {
-  title = "Hver gang du betaler,",
-  highlight = "gør du en forskel",
-  description = "Med Dankort Øremærket støtter du naturen i Danmark — helt automatisk, hver gang du betaler med dit Dankort eller Visa/Dankort.",
-  linkText = "Læs mere om Den Danske Naturfond",
-  linkHref = "https://naturfonden.dk/?gad_source=1&gad_campaignid=22207585853&gbraid=0AAAAAC8Dva9a1v0yxxFjhJtSrX1SS9j5p&gclid=CjwKCAjw5s_QBhAdEiwADD_gBo_y8uLhC8JL41dDY8sfqBLep1R3-wccMpOg6tSkO9qBSgAjgeUQXhoCKGYQAvD_BwE",
-  imageSrc = "/images/dankortgren.webp",
-  imageAlt = "Dankort kort med plante"
-} = Astro.props;
----
- 
 <section class="hero">
   <div class="hero__container">
+
     <h1 class="hero__title">
-      {title}<br />
-      <span class="hero__highlight">{highlight}</span>
+      Hver gang du betaler,
+      <br />
+
+      <span class="hero__highlight">
+        gør du en forskel
+      </span>
     </h1>
- 
-    <p class="hero__description">{description}</p>
-    <a href={linkHref} class="hero__link">{linkText}</a>
- 
+
+    <p class="hero__description">
+      Med Dankort Øremærket støtter du naturen i Danmark
+      — helt automatisk, hver gang du betaler med dit
+      Dankort eller Visa/Dankort.
+    </p>
+
+    <a
+      href="https://naturfonden.dk/?gad_source=1&gad_campaignid=22207585853&gbraid=0AAAAAC8Dva9a1v0yxxFjhJtSrX1SS9j5p&gclid=CjwKCAjw5s_QBhAdEiwADD_gBo_y8uLhC8JL41dDY8sfqBLep1R3-wccMpOg6tSkO9qBSgAjgeUQXhoCKGYQAvD_BwE"
+      class="hero__link"
+    >
+      Læs mere om Den Danske Naturfond
+    </a>
+
     <div class="hero__image">
-      <img src={imageSrc} alt={imageAlt} />
+      <img
+        src="/images/dankortgren.webp"
+        alt="Dankort kort med plante"
+      />
     </div>
+
   </div>
 </section>
  
@@ -46,7 +53,7 @@ const {
   .hero {
     padding: 1.25rem 0 2rem;
     background: #FFFFFF;
-    font-family: 'Raleway', sans-serif;
+
     color: #1A1A1A;
   }
  
@@ -57,9 +64,9 @@ const {
   }
  
   .hero__title {
-    font-size: 1.5rem;
+  
     line-height: 1.15;
-    font-weight: lighter;
+
     letter-spacing: -0.01em;
     margin-bottom: 1.25rem;
 ;
@@ -67,21 +74,21 @@ const {
  
   .hero__highlight {
     color: #E21E26;
-    font-weight: 800;
+
   }
  
   .hero__description {
     color: #1A1A1A;
-    font-size: 0.95rem;
+
     max-width: 38ch;
     margin-bottom: 1.25rem;
     line-height: 1.5;
-    font-weight: lighter;
+
   }
  
   .hero__link {
     color: #E21E26;
-    font-weight: 700;
+
     font-size: 0.875rem;
   }
  
@@ -113,7 +120,7 @@ const {
  
     .hero__title {
       grid-column: 1;
-      font-size: 2.25rem;
+
       margin-bottom: 1.5rem;
     }
  
@@ -132,10 +139,6 @@ const {
 }
   }
  
-  @media (min-width: 1024px) {
-    .hero__title {
-      font-size: 2.5rem;
-    }
-  }
+
 </style>
  

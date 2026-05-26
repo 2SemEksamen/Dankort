@@ -62,14 +62,14 @@
 
 
 .menu-wrapper {
-  width: 100%;
+
 
 
   padding: 24px;
 
   background: #f3f3f3;
 
-  font-family: "Raleway", sans-serif;
+
 }
 
 .menu-card {
@@ -177,32 +177,27 @@ gap: 60px;
 
   font-weight: bolder;
 }
+@media (min-width: 768px) {
 
-@media (min-width: 924px) {
-
-    
   .menu-wrapper {
-box-sizing: border-box;
-  display: grid;
-grid-template-columns: 1fr  400px;
+    box-sizing: border-box;
+    display: grid;
+    grid-template-columns: 1fr 400px;
+    align-items: start;
   }
 
   .menu-card {
-
-max-height: 250px;
     padding: 70px;
-
     margin-bottom: 0;
   }
 
-.sections {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 60px;
-}
+  .sections {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 60px;
+  }
+
   .campaign-card {
-  
-max-height: 400px;
     padding: 60px 40px;
   }
 
@@ -214,5 +209,4 @@ max-height: 400px;
     font-size: 38px;
   }
 }
-
 </style>
