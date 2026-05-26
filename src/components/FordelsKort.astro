@@ -1,0 +1,34 @@
+---
+const { fordel } = Astro.props;
+---
+
+<article class="fordels-kort">
+  <img src={fordel.Image} alt={fordel["Front-title"]} />
+
+  <h3>{fordel["Front-title"]}</h3>
+  <p>{fordel.Points} point</p>
+</article>
+
+<style>
+  .fordels-kort {
+    min-width: 140px;
+  }
+
+  .fordels-kort img {
+    width: 140px;
+    height: 140px;
+    object-fit: cover;
+    border-radius: 12px;
+  }
+
+  .fordels-kort h3 {
+    font-size: 10px;
+    margin: 6px 0 2px;
+    font-weight: 800;
+  }
+
+  .fordels-kort p {
+    font-size: 10px;
+    margin: 0;
+  }
+</style>

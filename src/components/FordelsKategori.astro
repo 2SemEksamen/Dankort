@@ -1,0 +1,50 @@
+---
+// @ts-nocheck
+import FordelsKort from "./FordelsKort.astro";
+
+const { titel, fordele } = Astro.props;
+---
+
+<section class="kategori">
+  <h2>{titel}</h2>
+
+  <div class="cards">
+    {fordele.map((fordel) => (
+      <FordelsKort fordel={fordel} />
+    ))}
+  </div>
+</section>
+
+<style>
+  .kategori {
+    padding: 28px 24px;
+  }
+
+  .kategori h2 {
+    font-size: 18px;
+    margin: 0 0 16px;
+    font-weight: 800;
+  }
+
+  .cards {
+    display: flex;
+    gap: 18px;
+    overflow-x: auto;
+    padding-bottom: 8px;
+  }
+
+  .cards::-webkit-scrollbar {
+    display: none;
+  }
+
+  @media (min-width: 768px) {
+    .kategori {
+      padding: 40px 72px;
+    }
+
+    .cards {
+      overflow: visible;
+      flex-wrap: wrap;
+    }
+  }
+</style>
