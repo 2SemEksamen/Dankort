@@ -1,0 +1,43 @@
+---
+//@ts-nocheck
+
+import FordelsKort from "./FordelsKort.astro";
+
+const endpoint =
+  "https://vpunmzjvsupxbwiryebz.supabase.co/rest/v1/Dankort ung?select=*";
+
+const options = {
+  headers: {
+    apikey: "sb_publishable_WnI5PsyHSVL9l1VzVgZbIA_-0GB8QJJ",
+  },
+};
+
+const products = await fetch(endpoint, options).then((res) => res.json());
+---
+
+<section class="fordele-slider">
+
+  <div class="slider">
+
+    {products.slice(0, 6).map((fordel) => (
+      <FordelsKort fordel={fordel} />
+    ))}
+
+  </div>
+
+</section>
+
+<style>
+.fordele-slider {
+  margin-left: 24px;
+}
+
+.slider {
+  display: flex;
+  gap: 24px;
+
+  overflow-x: auto;
+
+  padding-bottom: 10px;
+}
+</style>
