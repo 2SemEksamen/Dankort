@@ -3,7 +3,7 @@
 
 ---
 
-<nav class="navbar">
+<section class="navbar">
   <a href="/" class="logo">
     <img src="/images/DankortLogo.png" alt="Dankort logo" />
   </a>
@@ -18,7 +18,7 @@
     <a href="/">Privat</a>
     <a href="/">Dankort Øremærket</a>
   </div>
-</nav>
+</section>
 
 
 
@@ -39,6 +39,7 @@ if (menuBtn && mobileMenu) {
   menuBtn.addEventListener("click", () => {
     mobileMenu.classList.toggle("active");
 
+
     if (mobileMenu.classList.contains("active")) {
       menuBtn.textContent = "✕";
     } else {
@@ -52,18 +53,19 @@ if (menuBtn && mobileMenu) {
 
  
   .navbar {
-    width: 100%;
+
     background: #e9e9e9;
     padding: 22px 18px;
 
     display: flex;
     align-items: center;
     justify-content: space-between;
-
-    font-family: "Raleway", sans-serif;
-
     position: relative;
     z-index: 1000;
+
+      position: sticky;
+  top: 0;
+
   }
 
   .logo img {
@@ -90,29 +92,30 @@ if (menuBtn && mobileMenu) {
   .mobile-menu {
     position: fixed;
     inset: 0;
-    background: rgba(255, 255, 255, 0.2);
+    background: #ffffff33;
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
     z-index: 999;
-    padding: 140px 32px;
     display: flex;
     flex-direction: column;
-
     opacity: 0;
     pointer-events: none;
-
     transition: 0.3s ease;
+
   }
 
   .mobile-menu.active {
     opacity: 1;
     pointer-events: auto;
+
   }
 
   .mobile-links {
     display: flex;
     flex-direction: column;
     align-items: flex-end;
+        margin-top: 120px;
+        margin-right: 10px;
 
     gap: 28px;
   }
@@ -126,9 +129,10 @@ if (menuBtn && mobileMenu) {
 
   .mobile-links .active-link {
     color: #ef1722;
+
   }
 
-  @media (min-width: 1024px) {
+  @media (min-width: 768px) {
     .navbar {
       padding: 18px 32px;
       box-sizing: border-box;
@@ -155,8 +159,8 @@ if (menuBtn && mobileMenu) {
     .desktop-nav a {
       text-decoration: none;
       color: #111;
-      font-size: 0.95rem;
-      font-weight: 500;
+
+      font-weight: regular;
       transition: 0.2s ease;
     }
 
@@ -166,7 +170,7 @@ if (menuBtn && mobileMenu) {
 
     .desktop-nav .active {
       color: #ef1722;
-      font-weight: 700;
+      font-weight: bolder;
     }
   }
 </style>
