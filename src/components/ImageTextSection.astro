@@ -1,40 +1,51 @@
----
-const {
-  category = "OM DANKORT ØREMÆRKET",
-  title = "Én lille handling.",
-  titleHighlight = "For en grønnere fremtid.",
-  description = "Dankort (og bankerne) donerer automatisk 1 øre til Den Danske Naturfond, hver gang du betaler med dit Dankort eller Visa/Dankort i Danmark.",
-  linkText = "Læs mere om hvordan det virker",
-  linkHref = "#",
-  imageSrc = "/images/enlillehandling.webp",
-  imageAlt = "Dansk natur",
-  reverse = false
-} = Astro.props;
----
- 
 <section class="img-text">
   <div class="img-text__container">
-    <div class={["img-text__inner", reverse ? "img-text__inner--reverse" : ""].join(' ')}>
+
+    <div class="img-text__inner">
+
       <div class="img-text__image">
-        <img src={imageSrc} alt={imageAlt} />
+        <img
+          src="/images/enlillehandling.webp"
+          alt="Dansk natur"
+        />
       </div>
+
       <div class="img-text__content">
-        {category && <span class="img-text__category">{category}</span>}
+
+        <span class="img-text__category">
+          OM DANKORT ØREMÆRKET
+        </span>
+
         <h2 class="img-text__title">
-          {title}<br />
-          {titleHighlight && <span class="img-text__highlight">{titleHighlight}</span>}
+          Én lille handling.
+          <br />
+
+          <span class="img-text__highlight">
+            For en grønnere fremtid.
+          </span>
         </h2>
-        <p class="img-text__description">{description}</p>
-        {linkText && <a href={linkHref} class="img-text__link">{linkText}</a>}
+
+        <p class="img-text__description">
+          Dankort (og bankerne) donerer automatisk 1 øre til
+          Den Danske Naturfond, hver gang du betaler med dit
+          Dankort eller Visa/Dankort i Danmark.
+        </p>
+
+        <a href="#" class="img-text__link">
+          Læs mere om hvordan det virker
+        </a>
+
       </div>
+
     </div>
+
   </div>
 </section>
  
 <style>
   .img-text {
     padding: 1.25rem 0 2rem;
-    font-family: 'Raleway', sans-serif;
+
     color: #1A1A1A;
   }
  
@@ -60,7 +71,7 @@ const {
  
   .img-text__category {
     display: block;
-    font-size: 0.7rem;
+
     font-weight: bolder;
     letter-spacing: 0.08em;
     text-transform: uppercase;
@@ -69,11 +80,10 @@ const {
   }
  
   .img-text__title {
-    font-size: 1.35rem;
+
     line-height: 1.2;
-    font-weight: bolder;
-    letter-spacing: -0.01em;
-    margin-bottom: 0.875rem;
+
+
   }
  
   .img-text__highlight {
@@ -82,18 +92,17 @@ const {
  
   .img-text__description {
     color: #1A1A1A;
-    font-size: 0.9rem;
-    margin-bottom: 0.875rem;
+
+
     max-width: 42ch;
     line-height: 1.5;
-    font-weight: lighter;
-    font-family: 'Raleway', sans-serif;
+
   }
  
   .img-text__link {
     color: #E21E26;
+    text-decoration: none;
     font-weight: bolder;
-    font-size: 0.875rem;
   }
  
   .img-text__link:hover {
@@ -123,15 +132,9 @@ const {
       aspect-ratio: 4 / 3;
     }
  
-    .img-text__title {
-      font-size: 1.75rem;
-    }
+
   }
  
-  @media (min-width: 1024px) {
-    .img-text__title {
-      font-size: 2rem;
-    }
-  }
+ 
 </style>
  
