@@ -4,7 +4,16 @@ const { fordel } = Astro.props;
 
 <article class="fordels-kort">
 
-  <img src={fordel.Image} alt={fordel["Front-title"]} />
+  <div class="image-wrapper">
+
+    <img src={fordel.Image} alt={fordel["Front-title"]} />
+
+    <div class="overlay">
+      <img id="lock" src="/images/lås.png" alt="" />
+      <p>Benyt appen for at gøre brug af points</p>
+    </div>
+
+  </div>
 
   <h3>{fordel["Front-title"]}</h3>
 
@@ -17,39 +26,87 @@ const { fordel } = Astro.props;
   width: 140px;
 }
 
-  img {
-    width: 140px;
-    height: 140px;
-    object-fit: cover;
-    border-radius: 16px;
+.image-wrapper {
+  position: relative;
+  overflow: hidden;
+  border-radius: 16px;
+}
+
+.image-wrapper img {
+  width: 140px;
+  height: 140px;
+  object-fit: cover;
+  border-radius: 16px;
+
+  transition: transform 0.3s ease;
+}
+
+.image-wrapper:hover img {
+  transform: scale(1.05);
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+
+  background: rgba(0,0,0,0.45);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  text-align: center;
+  padding: 12px;
+
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.image-wrapper:hover .overlay {
+  opacity: 1;
+}
+
+#lock{
+  width: 50px;
+  height: 50px;
+  margin-bottom: 12px;
+
+}
+
+.overlay p {
+  color: white;
+  font-size: 12px;
+  font-weight: 700;
+  margin: 0;
+}
+
+h3 {
+  font-size: 12px;
+  margin: 8px 0 2px;
+}
+
+p {
+  font-size: 11px;
+  margin: 0;
+}
+
+@media (min-width: 768px) {
+  .fordels-kort {
+    width: 180px;
+  }
+
+  .image-wrapper img {
+    width: 180px;
+    height: 180px;
   }
 
   h3 {
-    font-size: 12px;
-    margin: 8px 0 2px;
+    font-size: 14px;
   }
 
   p {
-    font-size: 11px;
-    margin: 0;
+    font-size: 12px;
   }
-
-  @media (min-width: 768px) {
-    .fordels-kort {
-      width: 180px;
-    }
-
-    img {
-      width: 180px;
-      height: 180px;
-    }
-
-    h3 {
-      font-size: 14px;
-    }
-
-    p {
-      font-size: 12px;
-    }
-  }
+}
 </style>
