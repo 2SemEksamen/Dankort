@@ -3,86 +3,110 @@ const { fordel } = Astro.props;
 ---
 
 <article class="fordels-kort">
+
   <div class="image-wrapper">
+
     <img src={fordel.Image} alt={fordel["Front-title"]} />
 
     <div class="overlay">
-      <img src="public/images/lås.png" alt="Lås" class="lock-icon" />
-      <p>Benyt appen for at gøre brug af dine point</p>
+      <img id="lock" src="/images/lås.png" alt="" />
+      <p>Benyt appen for at gøre brug af points</p>
     </div>
+
   </div>
 
   <h3>{fordel["Front-title"]}</h3>
+
   <p>{fordel.Points} point</p>
+
 </article>
 
 <style>
+.fordels-kort {
+  width: 140px;
+}
+
+.image-wrapper {
+  position: relative;
+  overflow: hidden;
+  border-radius: 16px;
+}
+
+.image-wrapper img {
+  width: 140px;
+  height: 140px;
+  object-fit: cover;
+  border-radius: 16px;
+
+  transition: transform 0.3s ease;
+}
+
+.image-wrapper:hover img {
+  transform: scale(1.05);
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+
+  background: rgba(0,0,0,0.45);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  text-align: center;
+  padding: 12px;
+
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.image-wrapper:hover .overlay {
+  opacity: 1;
+}
+
+#lock{
+  width: 50px;
+  height: 50px;
+  margin-bottom: 12px;
+
+}
+
+.overlay p {
+  color: white;
+  font-size: 12px;
+  font-weight: 700;
+  margin: 0;
+}
+
+h3 {
+  font-size: 12px;
+  margin: 8px 0 2px;
+}
+
+p {
+  font-size: 11px;
+  margin: 0;
+}
+
+@media (min-width: 768px) {
   .fordels-kort {
-    min-width: 140px;
+    width: 180px;
   }
 
-  .image-wrapper {
-    position: relative;
-    width: 140px;
-    height: 140px;
-    overflow: hidden;
-    border-radius: 12px;
+  .image-wrapper img {
+    width: 180px;
+    height: 180px;
   }
 
-  .fordels-kort img {
-    width: 140px;
-    height: 140px;
-    object-fit: cover;
-    border-radius: 12px;
-    display: block;
+  h3 {
+    font-size: 14px;
   }
 
-  .overlay {
-    position: absolute;
-    inset: 0;
-    background: rgba(0, 0, 0, 0.45);
-
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-
-    text-align: center;
-    padding: 12px;
-
-    opacity: 0;
-    transition: opacity 0.3s ease;
-
-    border-radius: 12px;
+  p {
+    font-size: 12px;
   }
-
-  .image-wrapper:hover .overlay {
-    opacity: 1;
-  }
-
- .lock-icon {
-    width: 40px !important;
-    height: 40px !important;
-    margin-bottom: 8px;
-    object-fit: contain !important;
-  }
-
-  .overlay p {
-    color: white;
-    font-size: 10px;
-    font-weight: 700;
-    line-height: 1.3;
-    margin: 0;
-  }
-
-  .fordels-kort h3 {
-    font-size: 10px;
-    margin: 6px 0 2px;
-    font-weight: 800;
-  }
-
-  .fordels-kort p {
-    font-size: 10px;
-    margin: 0;
-  }
+}
 </style>

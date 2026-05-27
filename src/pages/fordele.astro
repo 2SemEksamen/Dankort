@@ -1,4 +1,5 @@
 ---
+//@ts-nocheck
 import FordeleTekst from "../components/FordeleTekst.astro";
 import PointSaldo from "../components/PointSaldo.astro";
 import AppPromo from "../components/AppPromo.astro";
@@ -8,41 +9,21 @@ import Footer from "../components/Footer.astro";
 import MiniNavbar from "../components/MiniNavbar.astro";
 import KontaktBank from "../components/KontaktBank.astro";
 import Layout from "../layouts/Layout.astro";
-
-import { supabase } from "../lib/supabase";
-
-const { data: fordele, error } = await supabase
-  .from("Dankort ung")
-  .select("*");
-
-console.log("DATA:", fordele);
-console.log("ERROR:", error);
-
-const konkurrencer = fordele?.filter((f) => f.Kategori === "Konkurrencer") || [];
-const madCafe = fordele?.filter((f) => f.Kategori === "Mad & Café") || [];
-const modeSport = fordele?.filter((f) => f.Kategori === "Mode & Sport") || [];
-const livsstil = fordele?.filter((f) => f.Kategori === "Livsstil & Wellness") || [];
-const genbrug = fordele?.filter((f) => f.Kategori === "Genbrug & Bæredygtighed") || [];
+import FordelsGrid from "../components/FordelsGrid.astro";
 ---
 
 <Layout>
+
+
+
+
+</section>
+
   <main>
     <Navbar />
     <MiniNavbar active="fordele" />
 
-    <section class="fordele-top">
-      <FordeleTekst />
-      <PointSaldo point={0} />
-    </section>
-
-    <section class="fordele-kategorier">
-      <FordelsKategori titel="Konkurrencer" fordele={konkurrencer} />
-      <FordelsKategori titel="Mad & Café" fordele={madCafe} />
-      <FordelsKategori titel="Mode & Sport" fordele={modeSport} />
-      <FordelsKategori titel="Livsstil & Wellness" fordele={livsstil} />
-      <FordelsKategori titel="Genbrug & Bæredygtighed" fordele={genbrug} />
-    </section>
-
+    <FordelsGrid />
     <AppPromo />
     <KontaktBank />
   </main>
@@ -50,9 +31,7 @@ const genbrug = fordele?.filter((f) => f.Kategori === "Genbrug & Bæredygtighed"
   <Footer />
 </Layout>
 
-<style is:global>
-  @import url("https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700;800&display=swap");
-</style>
+
 
 <style>
   .fordele-top {
