@@ -302,7 +302,7 @@ Hvis vi skulle arbejde videre med projektet, kunne vi forbedre det ved at tilfø
 ## Gruppemedlemmer
 
 - Signe Skriver Lorentzen
-- Cecilie Grehart
+- Cecilie Due Gregart
 - Louise Rasmussen
 - Maya Christine Jensen
 
