@@ -29,11 +29,7 @@ const { point = 0 } = Astro.props;
 </div>
 <style>
 
-.point-wrapper {
-  padding: 48px 24px;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-}
+
 
 
 .fordele-tekst{    
@@ -62,7 +58,11 @@ const { point = 0 } = Astro.props;
   }
 
   @media (min-width: 768px) {
-   
+   .point-wrapper {
+  padding: 48px 24px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
 
     .fordele-tekst p {
       max-width: 560px;
@@ -73,7 +73,15 @@ const { point = 0 } = Astro.props;
   .point-saldo {
     text-align: center;
     margin-top: 48px;
+    margin-bottom: 60px;
   }
+
+  .point-saldo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 
   .point-saldo p {
     font-size: 28px;
