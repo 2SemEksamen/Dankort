@@ -15,7 +15,7 @@ Projektet er bygget med komponenter og responsive layouts, så hjemmesiden funge
 
 ## Links
 - GitHub repository:https://github.com/2SemEksamen/Dankort
-- Netlify Pages: <meta name="robots" content="noindex">
+- Netlify Pages: (https://dankort-oremaerket.netlify.app/)
 - Figma: (https://www.figma.com/design/x24YUmL8RRwHvvjkJx2PVK/Dankort?node-id=1657-2438&p=f&t=vQBrH1IluZ0uIXMl-0)
 
 ## Projektstruktur
