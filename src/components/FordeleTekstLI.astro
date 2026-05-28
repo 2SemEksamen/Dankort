@@ -1,0 +1,118 @@
+---
+const { point = 240 } = Astro.props;
+
+---
+
+
+<div class="point-wrapper">
+
+<section class="fordele-tekst">
+  <h1>Find dine <span>fordele</span></h1>
+
+  <h2>Fordele der giver mere tilbage</h2>
+
+  <p>
+    Med Dankort Ung får du adgang til et univers fyldt med eksklusive rabatter,
+    konkurrencer og rewards i samarbejde med spændende partnere.
+    Brug dine point på alt fra caféer, mode og sport til oplevelser,
+    festivalbilletter og bæredygtige produkter.
+    Jo mere du engagerer dig i universet, desto flere fordele låser du op for.
+    Deltag i challenges, optjen point og vær med i konkurrencer om fede præmier –
+    samtidig med at du bliver en del af en løsning, der gør en forskel for både dig
+    og fremtiden.
+  </p>
+</section>
+
+
+<section class="point-saldo">
+  <p>Din saldo</p>
+  <strong>{point}</strong>
+  <span>POINT</span>
+</section>
+</div>
+
+
+
+
+<style>
+
+
+
+
+.fordele-tekst{    
+  margin: 20px;}
+
+  .fordele-tekst h1 {
+
+    line-height: 1.1;
+    margin: 0 0 28px;
+
+  }
+
+
+
+  .fordele-tekst h2 {
+    color: #E21E27;
+
+    margin: 0 0 12px;
+
+  }
+
+  .fordele-tekst p {
+
+    line-height: 1.7;
+
+  }
+
+  @media (min-width: 768px) {
+   .point-wrapper {
+  padding: 48px 24px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+    .fordele-tekst p {
+      max-width: 560px;
+    }
+  }
+
+
+  .point-saldo {
+    text-align: center;
+    margin-top: 48px;
+    margin-bottom: 60px;
+  }
+
+  .point-saldo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+  .point-saldo p {
+    font-size: 28px;
+    margin: 0 0 16px;
+  }
+
+  .point-saldo strong {
+    display: block;
+    color: #E21E27;
+    font-size: 64px;
+    line-height: 1;
+
+  }
+
+  .point-saldo span {
+    display: block;
+    font-size: 28px;
+
+    margin-top: 12px;
+  }
+
+  @media (min-width: 768px) {
+    .point-saldo {
+      margin-top: 0;
+    }
+  }
+</style>
