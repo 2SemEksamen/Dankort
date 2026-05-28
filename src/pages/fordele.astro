@@ -1,58 +1,31 @@
 ---
 //@ts-nocheck
-import FordeleTekst from "../components/FordeleTekst.astro";
-import PointSaldo from "../components/PointSaldo.astro";
-import AppPromo from "../components/AppPromo.astro";
-import FordelsKategori from "../components/FordelsKategori.astro";
+import Layout from '../layouts/Layout.astro';
+import GuestFordele from '../components/GuestFordele.astro';
+import BrugerFordele from '../components/BrugerFordele.astro';
 
-import MiniNavbar from "../components/MiniNavbar.astro";
-import KontaktBank from "../components/KontaktBank.astro";
-import Layout from "../layouts/Layout.astro";
-import FordelsGrid from "../components/FordelsGrid.astro";
+
 ---
 
+
 <Layout>
+<div id="bruger">
+  <BrugerFordele />
+</div>
 
-
-
-
-</section>
-
-  <main>
-
-    <MiniNavbar active="fordele" />
-<FordeleTekst />
-
-    <FordelsGrid />
-    <AppPromo />
-    <KontaktBank />
-  </main>
-
-
+<div id="guest">
+  <GuestFordele />
+</div>
 </Layout>
+<script>
+const userType = localStorage.getItem("userType");
 
+const bruger = document.getElementById("bruger");
+const guest = document.getElementById("guest");
 
-
-<style>
-  .fordele-top {
-    display: grid;
-    grid-template-columns: 1fr 130px;
-    gap: 24px;
-    align-items: center;
-    padding: 48px 28px 36px;
-    border-bottom: 4px solid #e5e5e5;
-    font-family: "Raleway", sans-serif;
-  }
-
-  .fordele-kategorier {
-    font-family: "Raleway", sans-serif;
-  }
-
-  @media (min-width: 768px) {
-    .fordele-top {
-      grid-template-columns: 1fr 280px;
-      gap: 64px;
-      padding: 72px 48px 48px;
-    }
-  }
-</style>
+if (userType === "bruger") {
+  guest.style.display = "none";
+} else {
+  bruger.style.display = "none";
+}
+</script>

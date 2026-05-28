@@ -1,0 +1,164 @@
+---
+
+---
+ 
+<section class="red-cta">
+  <div class="red-cta__container">
+    <div class="red-cta__inner">
+
+      <div class="red-cta__content">
+
+        <h2 class="red-cta__title">
+          Bliv en del af noget større med Dankort Ung
+          og begynd at optjen point.
+        </h2>
+
+        <p class="red-cta__description">
+          Opret en konto gratis og se, hvordan dine betalinger gør en forskel for naturen.
+          Optjen point, og brug dem på fede præmier og konkurrencer.
+        </p>
+
+        <a href="/pages/login.astro" class="red-cta__button">
+          Læs mere
+        </a>
+
+      </div>
+
+      <div class="red-cta__phone">
+        <img src="/images/app.webp" alt="Dankort Ung app" />
+      </div>
+
+   
+
+    </div>
+  </div>
+</section>
+ 
+
+<style>
+
+  h2 {
+    color: #FFFFFF;
+
+  }
+  .red-cta {
+    background: #E21E26;
+    color: #FFFFFF;
+    padding: 1.25rem 0;
+  
+  }
+
+  .red-cta__container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 1.25rem;
+  }
+
+  .red-cta__inner {
+    display: grid;
+    grid-template-columns: 1fr 0.7fr;
+    gap: 1.25rem;
+    align-items: center;
+  }
+
+  .red-cta__title {
+    line-height: 1.25;
+    font-size: 14px;
+    margin-top: 0;
+  }
+
+  .red-cta__description {
+    margin: 1rem 0;
+font-size: 10px;
+    line-height: 1.4;
+
+  }
+
+
+  .red-cta__button {
+    display: inline-block;
+    background: #FFFFFF;
+    color: #E21E26;
+    font-weight: bolder;
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+    font-size: 12px;
+    text-decoration: none;
+    transition:  0.2s ease;
+  }
+
+  .red-cta__button:hover {
+    background: #EEEEEE;
+  }
+
+  .red-cta__phone {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .red-cta__phone img {
+    max-height: 280px;
+    width: auto;
+    object-fit: contain;
+    display: block;
+    margin: -3rem 0;  
+  }
+
+  .red-cta__side {
+  
+    line-height: 1.5;
+    opacity: 0.95;
+  }
+
+  @media (min-width: 768px) {
+    .red-cta {
+      padding: 4rem 0;
+    }
+
+    .red-cta__container {
+      padding: 0 1.5rem;
+    }
+
+    .red-cta__inner {
+      grid-template-columns: 1.3fr 0.9fr 1fr;
+      gap: 2.5rem;
+      
+    }
+
+    .red-cta__title {
+      font-size: 1.7rem;
+    }
+
+    .red-cta__description {
+      margin: 1.5rem 0;
+      font-size: 0.95rem;
+      max-width: 42ch;
+    }
+
+    .red-cta__button {
+      font-size: 0.95rem;
+      padding: 0.85rem 1.75rem;
+    }
+
+    .red-cta__phone img {
+      max-height: 500px;
+      margin: -7rem 0;  
+      margin-left: 80%;
+    }
+
+    .red-cta__side {
+      display: block;
+      max-width: 22ch;
+        margin-left: 50%;
+    }
+  }
+
+  @media (min-width: 1200px) {
+    .red-cta__title {
+      font-size: 1.9rem;
+    }
+  }
+</style>

@@ -1,23 +1,25 @@
 ---
 
 import Layout from '../layouts/Layout.astro';
-import BytPoint from '../components/BytPoint.astro';
-import LUvelkommen from '../components/LUvelkommen.astro'; 
-import FirstScroll from '../components/FirstScroll.astro';	
-import MiniNavbar from '../components/MiniNavbar.astro';
-import RedCTA from '../components/RedCTA.astro';
-import OmOre from '../components/OmOre.astro';
+import LoginSite from '../components/LoginSite.astro';
 
 // Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
 // Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
 ---
 
 <Layout>
-
-	<MiniNavbar active="velkommen"/>
-	<LUvelkommen/>
-	<BytPoint/>
-	<FirstScroll />
-	<RedCTA />
-	<OmOre />
+<LoginSite />
 </Layout>
+
+<script>
+	const userType = localStorage.getItem("userType");
+
+const bruger = document.getElementById("bruger");
+const guest = document.getElementById("guest");
+
+if (userType === "bruger") {
+  guest.style.display = "none";
+} else {
+  bruger.style.display = "none";
+}
+</script>

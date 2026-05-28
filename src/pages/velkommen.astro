@@ -1,0 +1,29 @@
+---
+import Layout from '../layouts/Layout.astro';
+import GuestForside from '../components/GuestForside.astro';
+import BrugerForside from '../components/BrugerForside.astro';
+---
+
+<Layout>
+
+
+<div id="guest-version">
+  <GuestForside />
+</div>
+
+<div id="bruger-version">
+  <BrugerForside />
+</div>
+</Layout>
+<script>
+  const userType = localStorage.getItem("userType");
+
+  const guest = document.getElementById("guest-version");
+  const bruger = document.getElementById("bruger-version");
+
+  if (userType === "bruger") {
+    guest.style.display = "none";
+  } else {
+    bruger.style.display = "none";
+  }
+</script>

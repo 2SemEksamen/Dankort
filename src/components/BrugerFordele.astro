@@ -1,0 +1,57 @@
+---
+//@ts-nocheck
+
+import FordeleTekstLI from "../components/FordeleTekstLI.astro";
+import PointSaldo from "../components/PointSaldo.astro";
+import AppPromo from "../components/AppPromo.astro";
+import FordelsKategori from "../components/FordelsKategori.astro";
+
+import MiniNavbar from "../components/MiniNavbar.astro";
+import KontaktBank from "../components/KontaktBank.astro";
+import Layout from "../layouts/Layout.astro";
+import FordelsGrid from "../components/FordelsGrid.astro";
+---
+
+
+
+
+
+
+  <main>
+
+    <MiniNavbar active="fordele" />
+<FordeleTekstLI />
+
+    <FordelsGrid />
+    <AppPromo />
+  
+  </main>
+
+
+
+
+
+
+<style>
+  .fordele-top {
+    display: grid;
+    grid-template-columns: 1fr 130px;
+    gap: 24px;
+    align-items: center;
+    padding: 48px 28px 36px;
+    border-bottom: 4px solid #e5e5e5;
+    font-family: "Raleway", sans-serif;
+  }
+
+  .fordele-kategorier {
+    font-family: "Raleway", sans-serif;
+  }
+
+  @media (min-width: 768px) {
+    .fordele-top {
+      grid-template-columns: 1fr 280px;
+      gap: 64px;
+      padding: 72px 48px 48px;
+    }
+  }
+</style>
