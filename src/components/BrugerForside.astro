@@ -2,6 +2,7 @@
 
 import LIVelkommen from './LIVelkommen.astro';
 import BytPoint from '../components/BytPoint.astro';
+import HjerteCard from '../components/HjerteCard.astro';	
 import DinStotteCard from '../components/DinStotteCard.astro';
 import FirstScroll from '../components/FirstScroll.astro';	
 import MiniNavbar from '../components/MiniNavbar.astro';
@@ -12,10 +13,69 @@ import OmOre from '../components/OmOre.astro';
 
 
 
-	<MiniNavbar active="velkommen"/>
-	<LIVelkommen/>
-	<DinStotteCard />
-	<BytPoint/>
-	<FirstScroll />
-	<RedCTA />
-	<OmOre />
+<MiniNavbar active="velkommen"/>
+
+<section class="hero-layout">
+  <div class="left-column">
+    <LIVelkommen />
+  </div>
+
+  <div class="right-column">
+    <DinStotteCard />
+    <HjerteCard />
+  </div>
+</section>
+
+<BytPoint/>
+<FirstScroll />
+<RedCTA />
+<OmOre />
+
+<style>
+
+
+@media (min-width: 768px) {
+.desktop-grid {
+display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 32px;
+	padding: 48px 32px;
+	align-items: start;
+	}
+
+
+	.left-column{
+margin: 0;
+
+	}
+
+
+  .hero-layout {
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+
+
+    align-items: start;
+
+    max-width: 1400px;
+    margin: 0 auto;
+
+  }
+
+  .left-column {
+    max-width: 760px;
+padding-top: 0;
+  }
+
+  .right-column {
+    display: flex;
+    flex-direction: column;
+ 
+margin: 0 auto;
+    padding-top: 60px;
+  }
+
+
+  }
+  	
+</style>
