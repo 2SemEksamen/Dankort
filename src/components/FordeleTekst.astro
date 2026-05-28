@@ -1,3 +1,8 @@
+---
+const { point = 0 } = Astro.props;
+---
+<div class="point-wrapper">
+
 <section class="fordele-tekst">
   <h1>Find dine <span>fordele</span></h1>
 
@@ -15,7 +20,22 @@
   </p>
 </section>
 
+
+<section class="point-saldo">
+  <p>Din saldo</p>
+  <strong>{point}</strong>
+  <span>POINT</span>
+</section>
+</div>
 <style>
+
+.point-wrapper {
+  padding: 48px 24px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+
 .fordele-tekst{    
   margin: 20px;}
 
@@ -46,6 +66,38 @@
 
     .fordele-tekst p {
       max-width: 560px;
+    }
+  }
+
+
+  .point-saldo {
+    text-align: center;
+    margin-top: 48px;
+  }
+
+  .point-saldo p {
+    font-size: 28px;
+    margin: 0 0 16px;
+  }
+
+  .point-saldo strong {
+    display: block;
+    color: #E21E27;
+    font-size: 64px;
+    line-height: 1;
+
+  }
+
+  .point-saldo span {
+    display: block;
+    font-size: 28px;
+
+    margin-top: 12px;
+  }
+
+  @media (min-width: 768px) {
+    .point-saldo {
+      margin-top: 0;
     }
   }
 </style>
