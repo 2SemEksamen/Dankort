@@ -2,16 +2,6 @@
 const { active } = Astro.props;
 ---
 
-<div class="user-profile">
-    
-  <div class="avatar">JJ</div>
-
-  <span class="user-name">Jens Jensen</span>
-
-  <span class="arrow">⌄</span>
-
-</div>
-
 <section class="tabs-wrapper">
 
   <nav class="tabs">
@@ -39,6 +29,10 @@ const { active } = Astro.props;
 
   </nav>
 
+  <a href="/" class="login-link">
+    Log ind
+  </a>
+
 </section>
 
 <style>
@@ -47,51 +41,10 @@ const { active } = Astro.props;
     font-family: raleway, sans-serif;
   }
 
-  .user-profile {
-    position: absolute;
 
-    top: 130px;
-    right: 16px;
-
-    display: flex;
-    align-items: center;
-    gap: 10px;
-
-    z-index: 1;
-  }
-
-  .avatar {
-    width: 42px;
-    height: 42px;
-
-    border-radius: 50%;
-    background: #ececec;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    font-size: 16px;
-    font-weight: 400;
-    color: #777;
-  }
-
-  .user-name {
-    font-size: 15px;
-    font-weight: 700;
-    color: #111;
-  }
-
-  .arrow {
-    font-size: 18px;
-    color: #111;
-
-    margin-bottom: 8px;
-  }
 
   .tabs-wrapper {
     position: fixed;
-
     bottom: 0;
     left: 0;
 
@@ -144,30 +97,28 @@ const { active } = Astro.props;
     background: #e31b23;
   }
 
+
+
+  .login-link {
+    position: absolute;
+
+    top: -750px;
+    right: 10px;
+
+    padding: 10px 16px;
+
+    text-decoration: none;
+    color: #E21E27;
+
+    font-size: 16px;
+    font-weight: 700;
+
+    z-index: 2000;
+  }
+
+
+
   @media (min-width: 768px) {
-
-    .user-profile {
-      top: 30px;
-      right: 40px;
-
-      gap: 16px;
-    }
-
-    .avatar {
-      width: 52px;
-      height: 52px;
-
-      font-size: 22px;
-    }
-
-    .user-name {
-      font-size: 18px;
-    }
-
-    .arrow {
-      font-size: 22px;
-      margin-bottom: 10px;
-    }
 
     .tabs-wrapper {
       position: relative;
@@ -176,6 +127,8 @@ const { active } = Astro.props;
       padding-bottom: 40px;
 
       background: white;
+
+      z-index: 1;
     }
 
     .tabs {
@@ -184,12 +137,19 @@ const { active } = Astro.props;
     }
 
     .tab {
-      font-size: 18px;
+      font-size: 16px;
       padding-bottom: 18px;
     }
 
     .tab.active::after {
       height: 4px;
+    }
+
+    .login-link {
+      top: 30px;
+      right: 40px;
+
+      font-size: 16px;
     }
   }
 </style>
