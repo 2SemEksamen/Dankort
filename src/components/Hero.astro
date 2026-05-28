@@ -1,141 +1,156 @@
 <section class="hero">
+
   <div class="hero__container">
 
-    <h1 class="hero__title">
-      Hver gang du betaler,
-      <br />
+    <div class="hero__content">
 
-      <span class="hero__highlight">
-        gør du en forskel
-      </span>
-    </h1>
+      <h1 class="hero__title">
+        Hver gang du betaler,
+        <br />
+        <span>gør du en forskel</span>
+      </h1>
 
-    <p class="hero__description">
-      Med Dankort Øremærket støtter du naturen i Danmark
-      — helt automatisk, hver gang du betaler med dit
-      Dankort eller Visa/Dankort.
-    </p>
+      <p class="hero__description">
+        Med Dankort Øremærket støtter du naturen i Danmark
+        — helt automatisk, hver gang du betaler med dit
+        Dankort eller Visa/Dankort.
+      </p>
 
-    <a
-      href="https://naturfonden.dk/?gad_source=1&gad_campaignid=22207585853&gbraid=0AAAAAC8Dva9a1v0yxxFjhJtSrX1SS9j5p&gclid=CjwKCAjw5s_QBhAdEiwADD_gBo_y8uLhC8JL41dDY8sfqBLep1R3-wccMpOg6tSkO9qBSgAjgeUQXhoCKGYQAvD_BwE"
-      class="hero__link"
-    >
-      Læs mere om Den Danske Naturfond
-    </a>
+      <a href="/" class="hero__link">
+        Læs mere om Den Danske Naturfond
+      </a>
+
+    </div>
 
     <div class="hero__image">
       <img
         src="/images/dankortgren.webp"
-        alt="Dankort kort med plante"
+        alt=""
       />
     </div>
 
   </div>
+
 </section>
- 
+
+
 <style>
 
-  .hero {
-  padding-top: 1.25rem ;
-  background: #FFFFFF;
 
-  color: #1A1A1A;
-  position: relative;  
-  z-index: 2;           
+   h1{
+
+        font-size: 35px;
+		    line-height: 1.4;
+        margin-bottom: 10px;
+    }
+h2 {
+
+      font-weight: extra-bold;
+      font-size: 12px;
+	      line-height: 1.4;
+
+     }
+    span{
+        color: #E21E27;
+		font-weight: bolder;
+     }
+     p {
+        font-weight: regular;
+        font-size: 14px;
+		    line-height: 1.4;
+        margin-top: 0;
+        margin-bottom: 20px;
+     }
+	   a {
+        font-weight: bolder;
+        font-size: 12px;
+     }
+
+
+
+     h3{
+        font-size: 18px;
+        font-weight: extra-bold;
+		    line-height: 1.4;
+        margin-top: 0;
+                margin-bottom: 10px;
+	
+     }
+
+
+.hero {
+  padding-top: 1.5rem;
 }
 
-.hero__image {
-  margin-top: 2rem;
+.hero__container {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
 
-  position: relative;   
-  z-index: 2;            
+  padding: 0 1.5rem;
 }
 
- 
-  .hero__container {
-    max-width: 1100px;
-    margin: 0 auto;
-    padding: 0 1.25rem;
-  }
- 
-  .hero__title {
+.hero__content {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.hero__title {
+  line-height: 1.1;
+}
+
+.hero__title span {
+  color: #E21E27;
+}
+
+.hero__description {
+  line-height: 1.5;
+max-width: 500px;
+}
+
+.hero__link {
+  color: #E21E27;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.hero__image img {
+  width: 100%;
+  display: block;
+}
+
+@media (min-width: 768px) {
+	h1{
+			font-size: 40px; 
+         margin-top: 0;
   
-    line-height: 1.15;
-
-    letter-spacing: -0.01em;
-    margin-bottom: 1.25rem;
-;
-  }
- 
-  .hero__highlight {
-    color: #E21E26;
-
-  }
- 
-  .hero__description {
-    color: #1A1A1A;
-
-    max-width: 38ch;
-    margin-bottom: 1.25rem;
-    line-height: 1.5;
+min-width: 400px;
+		}
+		h2 {
+			font-size: 16px;
+		}
+		p {
+			font-size: 14px;
+		}
+  .hero__container {
+    grid-template-columns: 1fr 1fr;
 
   }
 
-
-  .hero__link {
-    color: #E21E26;
-text-decoration: none;
-font-weight: bolder;
-
-  }
- 
- 
-  .hero__image {
-    margin-top: 2rem;
-  }
- 
   .hero__image img {
-    width: 100%;
-    height: auto;
-    object-fit: contain;
-    margin: 0 auto;
-    display: block;
+    width: 700px;
+    margin-right: 80px;
   }
- 
-  @media (min-width: 768px) {
-    .hero {
-      padding: 4rem 0 2.5rem;
-    }
- 
-    .hero__container {
-      display: grid;
-      grid-template-columns: 1.1fr 1fr;
-      gap: 4rem;
-      align-items: center;
-      padding: 0 1.5rem;
-    }
- 
-    .hero__title {
-      grid-column: 1;
+.hero__content {
+margin-top: 30px;
+margin-left: 50px;
+  }
 
-      margin-bottom: 1.5rem;
-    }
- 
-    .hero__description {
-      grid-column: 1;
-    }
- 
-    .hero__link {
-      grid-column: 1;
-    }
- .hero__image {
-  grid-column: 2;
-  grid-row: 1 / span 3;
-  margin-top: 0;
+  .hero__container {
+
+  gap: 0rem;
 
 }
-  }
- 
-
-</style>
- 
+}
+  </style>
