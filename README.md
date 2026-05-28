@@ -1,120 +1,190 @@
-# Astro Starter Kit: Basics
 
-```sh
-npm create astro@latest -- --template basics
-```
-
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
-
-## 🚀 Project Structure
-
-Inside of your Astro project, you'll see the following folders and files:
-
-```text
-/
-├── public/
-│   └── favicon.svg
-├── src
-│   ├── assets
-│   │   └── astro.svg
-│   ├── components
-│   │   └── Welcome.astro
-│   ├── layouts
-│   │   └── Layout.astro
-│   └── pages
-│       └── index.astro
-└── package.json
-```
-
-To learn more about the folder structure of an Astro project, refer to [our guide on project structure](https://docs.astro.build/en/basics/project-structure/).
-
-## 🧞 Commands
-
-All commands are run from the root of the project, from a terminal:
-
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
-
-## 👀 Want to learn more?
-
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
-
-
-
-# Spin_the_recipe
+# Dankort
 ## Om projektet
 
-Dette projekt er lavet som en del af Tema 8. Vi har lavet et dynamisk website med HTML, CSS og JavaScript, hvor indholdet bliver hentet fra et Rest API.
+Dette projekt er lavet som en del af 2. semesters eksamen. Vi har udviklet et responsivt underwebsite for Dankort Øremærket i Astro med HTML, CSS og JavaScript.
 
 Sitet består af flere sider, hvor brugeren kan:
 
-Se en liste med indhold, klikke sig videre til en detaljeside hvor de kan bruge filtrering, se information om det specifille indhold.
+- læse om Dankort Øremærket  
+- se forskellige brugerfordele  
+- få information om støtte til naturen  
+- navigere mellem forskellige sider og sektioner  
+
+Projektet er bygget med komponenter og responsive layouts, så hjemmesiden fungerer på både mobil, tablet og desktop.
 
 ## Links
-- GitHub repository:https://github.com/MayaJensen/Spin_the_recipe
-- GitHub Pages: https://mayajensen.github.io/Spin_the_recipe/index.html
-- Figma: (https://www.figma.com/design/Bx9zIuP7XIadTyRiboYj6D/Spin-the-recipe?node-id=1024-5118&t=bogTyu18cVfwlfIK-0)
+- GitHub repository:https://github.com/2SemEksamen/Dankort
+- Netlify Pages: kommer
+- Figma: (https://www.figma.com/design/x24YUmL8RRwHvvjkJx2PVK/Dankort?node-id=1657-2438&p=f&t=vQBrH1IluZ0uIXMl-0)
 
 ## Projektstruktur
-Projektet er opdelt i HTML, CSS og JavaScript-filer.
-```
-project/
-├── index.html
-├── recipelist.html
-├── recipedetails.html
-├── css/
-│   └── style.css
-├── js/
-│   ├── index.js
-│   ├── recipelist.js
-│   ├── recipedetails.js
-└── README.md
-```
+Projektet er opdelt i astrofiler som indeholder, HTML, Javesqript og css.
 
+```
+/
+├── public/
+│   ├── images/
+│   │   ├── app-store.png
+│   │   ├── app.webp
+│   │   ├── appstoreknap.webp
+│   │   ├── dankortgren.webp
+│   │   ├── DankortLogo.png
+│   │   ├── enlillehandling.webp
+│   │   ├── flag.png
+│   │   ├── gladevennersammen.webp
+│   │   ├── google-play.png
+│   │   ├── googleplayapp.webp
+│   │   ├── gren.png
+│   │   ├── hands.png
+│   │   ├── Hjerte.png
+│   │   ├── lås.png
+│   │   ├── money-cup.png
+│   │   ├── stork.png
+│   │   ├── telefon-højre.png
+│   │   ├── telefon-venstre.png
+│   │   ├── tree.png
+│   │   ├── træ.png
+│   │   └── Velkommen-iphonebilleder.webp
+│   ├── favicon.ico
+│   └── favicon.svg
+│
+├── src/
+│   ├── assets/
+│   │   ├── astro.svg
+│   │   └── background.svg
+│   │
+│   ├── components/
+│   │   ├── AppPromo.astro
+│   │   ├── BrugerFordele.astro
+│   │   ├── BrugerForside.astro
+│   │   ├── BytPoint.astro
+│   │   ├── DinStotteCard.astro
+│   │   ├── FirstScroll.astro
+│   │   ├── Footer.astro
+│   │   ├── FordeleTekst.astro
+│   │   ├── FordeleTekstLI.astro
+│   │   ├── FordelsGrid.astro
+│   │   ├── FordelsKort.astro
+│   │   ├── ForskelInfoCard.astro
+│   │   ├── GuestFordele.astro
+│   │   ├── GuestForside.astro
+│   │   ├── Hero.astro
+│   │   ├── HjerteCard.astro
+│   │   ├── ImageTextSection.astro
+│   │   ├── KontaktBank.astro
+│   │   ├── LIRedCTA.astro
+│   │   ├── LIVelkommen.astro
+│   │   ├── LocalSupport.astro
+│   │   ├── LoginSite.astro
+│   │   ├── LUVelkommen.astro
+│   │   ├── MiniNavbar.astro
+│   │   ├── Navbar.astro
+│   │   ├── OmOre.astro
+│   │   └── RedCTA.astro
+│   │
+│   ├── layouts/
+│   │   └── Layout.astro
+│   │
+│   ├── lib/
+│   │
+│   ├── pages/
+│   │   ├── fordele.astro
+│   │   ├── index.astro
+│   │   ├── oere.astro
+│   │   └── velkommen.astro
+│   │
+│   └── types.d.ts
+│
+├── .gitignore
+├── astro.config.mjs
+├── package-lock.json
+├── package.json
+├── README.md
+└── tsconfig.json
+```
 ### Filbeskrivelser
 
-- **index.html** – forsiden
-- **recipelist.html** – viser en liste med data fra API'et som kan filtreres
-- **recipedetails.html** – viser detaljer om en valgt opskrift
-- **style.css** – styrer designet
-- **JavaScript-filer** – styrer det dynamiske indhold på de forskellige sider
+- **index.astro** – forsiden til hjemmesiden hvor brugeren kan logge ind eller fortsætte som gæst
+- **fordele.astro** – side der viser forskellige brugerfordele og muligheder i universet med point  
+- **oere.astro** – side om Dankort Øremærket og hvordan brugeren støtter naturen gennem betalinger  
+- **velkommen.astro** – velkomstside til nye og gamle brugere med introduktion til universet  
+
+- **Layout.astro** – fælles layout som bruges på alle sider til struktur, metadata og styling  
+- **Navbar.astro** – navigation/menu øverst på siden  
+- **MiniNavbar.astro** – mindre navigation
+- **Footer.astro** – footer med support, links og information  
+- **Components** – genbrugelige komponenter som styrer indholdet på de forskellige sider  
+ 
+- **BrugerFordele.astro** – viser fordele til en logget ind bruger  
+- **GuestFordele.astro** – viser fordele til gæster  
+- **BrugerForside.astro** – forside til logget ind bruger  
+- **GuestForside.astro** – forside til gæstebruger  
+ 
 
 ---
 
 ## Hvordan koden fungerer
 
-Vi har opdelt JavaScript, så hver side har sin egen js fil.
+Vi har opdelt hjemmesiden i komponenter, så hver sektion har sin egen `.astro` fil.
 
-### index.js
+### index.astro
 
-Bruges på forsiden.
-Her bliver indhold vist dynamisk, via kategorier hentet fra rest API´et.
+Bruges på login siden.
+Her kan brugeren vælge imellem, om de ønsker at logge ind som gæst, eller om de er bruger og derfor vil logge ind.
+Alt afhængigt af, hvad de vælger, vil de blive ført til komponentet til brugere eller til gæster.
 
-### recipelist.js
+---
 
-Henter data fra Rest API'et og viser en liste med opskrifter på siden, som kan filtreres.
+### fordele.astro
+
+Viser forskellige brugerfordele og tilbud, samt viser antal point.
+
+Her bliver komponenter som:
+- FordelsKort  
+- FordelsGrid  
+  
+
+brugt til at vise indhold til brugeren.
+
+
+---
+
+### oere.astro
+
+Bruges til siden om Dankort Øremærket.
+
+Her bliver indhold omkring:
+- naturstøtte  
+- donationer  
+- brugerens forskel  
+
+vist gennem komponenter som:
+- ForskelInfoCard
+- Hero  
+- OmOre  
+
+---
+
+### velkommen.astro
+
+Bruges som velkomstside til nye eller gamle brugere.
+
+Her bliver forskellige komponenter samlet dynamisk for at opbygge forsiden med:
+- hero section  
+- app promotion  
+- informationssektioner  
+- call-to-actions  
+
+---
 
 **Flow:**
 
-1. Siden loader
-2. JavaScript kører
-3. Data hentes fra Rest API
-4. Data bliver gennemgået med loop
-5. HTML bliver indsat i DOM'en
-6. Brugeren kan klikke på en opskrift
-
-### recipedetails.js
-
-Bruges til detaljesiden. Den læser et id fra URL'en og henter derefter den rigtige opskrift fra Rest API'et.
-
-Det gør det muligt at genbruge den samme HTML-side til mange opskrifter. I stedet for at lave én side per opskrift, bruger vi ét id i URL'en til at vise det rigtige indhold.
-
+1. Siden loader  
+2. Astro samler komponenterne  
+3. Styling bliver anvendt  
+4. Komponenterne bliver vist på siden  
+5. Brugeren kan navigere mellem siderne.  
 
 ---
 
