@@ -2,6 +2,10 @@
 const { active } = Astro.props;
 ---
 
+<a href="/" class="login-link">
+  Log ind
+</a>
+
 <section class="tabs-wrapper">
 
   <nav class="tabs">
@@ -29,10 +33,6 @@ const { active } = Astro.props;
 
   </nav>
 
-  <a href="/" class="login-link">
-    Log ind
-  </a>
-
 </section>
 
 <style>
@@ -41,10 +41,25 @@ const { active } = Astro.props;
     font-family: raleway, sans-serif;
   }
 
+  .login-link {
+    position: absolute;
 
+    top: 130px;
+    right: 16px;
+
+    text-decoration: none;
+
+    font-size: 16px;
+    font-weight: 700;
+
+    color: #E21E27;
+
+    z-index: 10;
+  }
 
   .tabs-wrapper {
     position: fixed;
+
     bottom: 0;
     left: 0;
 
@@ -57,7 +72,7 @@ const { active } = Astro.props;
 
     padding: 16px;
 
-    z-index: 1000;
+    z-index: 1;
   }
 
   .tabs {
@@ -97,28 +112,12 @@ const { active } = Astro.props;
     background: #e31b23;
   }
 
-
-
-  .login-link {
-    position: absolute;
-
-    top: -750px;
-    right: 10px;
-
-    padding: 10px 16px;
-
-    text-decoration: none;
-    color: #E21E27;
-
-    font-size: 16px;
-    font-weight: 700;
-
-    z-index: 2000;
-  }
-
-
-
   @media (min-width: 768px) {
+
+    .login-link {
+      right: 40px;
+      font-size: 16px;
+    }
 
     .tabs-wrapper {
       position: relative;
@@ -127,8 +126,6 @@ const { active } = Astro.props;
       padding-bottom: 40px;
 
       background: white;
-
-      z-index: 1;
     }
 
     .tabs {
@@ -139,17 +136,6 @@ const { active } = Astro.props;
     .tab {
       font-size: 16px;
       padding-bottom: 18px;
-    }
-
-    .tab.active::after {
-      height: 4px;
-    }
-
-    .login-link {
-      top: 30px;
-      right: 40px;
-
-      font-size: 16px;
     }
   }
 </style>
