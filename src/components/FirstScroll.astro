@@ -19,7 +19,7 @@ const products = await fetch(endpoint, options).then((res) => res.json());
 
   <div class="slider">
 
-    {products.slice(0, 6).map((fordel) => (
+    {products.slice(0, 10).map((fordel) => (
       <FordelsKort fordel={fordel} />
     ))}
 
@@ -35,9 +35,20 @@ const products = await fetch(endpoint, options).then((res) => res.json());
 .slider {
   display: flex;
   gap: 24px;
+  margin-bottom: 50px;
 
   overflow-x: auto;
 
   padding-bottom: 10px;
+}
+
+@media (min-width: 768px) {
+  .slider {
+margin-bottom: 100px;
+
+  }
+
+
+
 }
 </style>
