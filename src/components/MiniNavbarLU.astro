@@ -2,15 +2,9 @@
 const { active } = Astro.props;
 ---
 
-<div class="user-profile">
-    
-  <div class="avatar">JJ</div>
-
-  <span class="user-name">Jens Jensen</span>
-
-  <span class="arrow">⌄</span>
-
-</div>
+<a href="/" class="login-link">
+  Log ind
+</a>
 
 <section class="tabs-wrapper">
 
@@ -47,46 +41,20 @@ const { active } = Astro.props;
     font-family: raleway, sans-serif;
   }
 
-  .user-profile {
+  .login-link {
     position: absolute;
 
     top: 130px;
     right: 16px;
 
-    display: flex;
-    align-items: center;
-    gap: 10px;
-
-    z-index: 1;
-  }
-
-  .avatar {
-    width: 42px;
-    height: 42px;
-
-    border-radius: 50%;
-    background: #ececec;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    text-decoration: none;
 
     font-size: 16px;
-    font-weight: 400;
-    color: #777;
-  }
-
-  .user-name {
-    font-size: 15px;
     font-weight: 700;
-    color: #111;
-  }
 
-  .arrow {
-    font-size: 18px;
-    color: #111;
+    color: #E21E27;
 
-    margin-bottom: 8px;
+    z-index: 10;
   }
 
   .tabs-wrapper {
@@ -146,27 +114,9 @@ const { active } = Astro.props;
 
   @media (min-width: 768px) {
 
-    .user-profile {
-    z-index: 10;
+    .login-link {
       right: 40px;
-
-      gap: 16px;
-    }
-
-    .avatar {
-      width: 52px;
-      height: 52px;
-font-weight: lighter;
-      font-size: 22px;
-    }
-
-    .user-name {
       font-size: 16px;
-    }
-
-    .arrow {
-      font-size: 20px;
-      margin-bottom: 10px;
     }
 
     .tabs-wrapper {
@@ -187,7 +137,5 @@ font-weight: lighter;
       font-size: 16px;
       padding-bottom: 18px;
     }
-
-    
   }
 </style>

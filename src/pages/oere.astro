@@ -1,20 +1,31 @@
 ---
+//@ts-nocheck
 import Layout from '../layouts/Layout.astro';
-import Hero from '../components/Hero.astro';
-import ForskelInfoCard from '../components/ForskelInfoCard.astro';
-import ImageTextSection from '../components/ImageTextSection.astro';
-import RedCTA from '../components/RedCTA.astro';
-import LocalSupport from '../components/LocalSupport.astro'; 
+import GuestOre from '../components/GuestOre.astro';
+import BrugerOre from '../components/BrugerOre.astro';
 
-import MiniNavbar from "../components/MiniNavbar.astro";
+
 ---
+
+
 <Layout>
+<div id="bruger">
+  <BrugerOre />
+</div>
 
-  <MiniNavbar active="oere" />
-  <Hero />
-  <ForskelInfoCard />
-<ImageTextSection />
-  <RedCTA />
-    <LocalSupport />
+<div id="guest">
+  <GuestOre />
+</div>
+</Layout>
+<script>
+const userType = localStorage.getItem("userType");
 
-</Layout> 
+const bruger = document.getElementById("bruger");
+const guest = document.getElementById("guest");
+
+if (userType === "bruger") {
+  guest.style.display = "none";
+} else {
+  bruger.style.display = "none";
+}
+</script>
